@@ -3,3 +3,7 @@ node_modules
 
 // log
 *.log
+
+// build output
+**/es
+**/lib

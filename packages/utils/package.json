@@ -1,15 +1,11 @@
 {
-  "name": "examples",
+  "name": "@dg-ui/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dg-ui": "workspace:^1.0.0"
-  }
+  "license": "ISC"
 }

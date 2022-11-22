@@ -1,0 +1,24 @@
+{
+  "name": "dg-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "dg-ui",
+    "vue3组件库"
+  ],
+  "typings": "lib/index.d.ts",
+  "author": "dyggod",
+  "license": "ISC",
+  "dependencies": {
+    "@dg-ui/utils": "workspace:^1.0.0"
+  }
+}
