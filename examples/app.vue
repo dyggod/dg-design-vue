@@ -8,9 +8,11 @@
 </template>
 
 <script setup lang='ts'>
-import { Button } from 'dg-ui'
+import { Button } from '@dyggod/dg-ui'
 </script>
 
-<style>
-
+<style lang="less">
+div {
+  color: green;
+}
 </style>

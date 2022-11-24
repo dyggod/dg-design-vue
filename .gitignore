@@ -7,3 +7,7 @@ node_modules
 // build output
 **/es
 **/lib
+
+// dist
+dist
+dg-ui

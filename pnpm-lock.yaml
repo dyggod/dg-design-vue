@@ -38,9 +38,9 @@ importers:
 
   examples:
     specifiers:
-      dg-ui: workspace:^1.0.0
+      '@dyggod/dg-ui': workspace:^1.0.0
     dependencies:
-      dg-ui: link:../packages/components
+      '@dyggod/dg-ui': link:../packages/components
 
   packages/components:
     specifiers:
