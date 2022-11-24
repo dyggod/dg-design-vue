@@ -6,7 +6,7 @@ import { mdPlugin } from './config/plugin'
 
 export default defineConfig({
   title: 'DG UI',
-  base: process.env.NODE_ENV === 'production' ? '/dg-ui/' : './',
+  base: process.env.NODE_ENV === 'production' ? '/dg-ui/' : '/',
   head: [
     [
       'meta',
