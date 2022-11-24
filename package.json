@@ -4,6 +4,7 @@
   "description": "vue3 component ui ",
   "main": "index.js",
   "scripts": {
+    "build:docs": "pnpm run -C docs docs:build",
     "test": "test"
   },
   "repository": {
