@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
+    "ui-dev": "pnpm run -C ../packages/components build && pnpm i && vite",
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

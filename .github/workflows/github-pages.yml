@@ -47,6 +47,8 @@ jobs:
         run: |
           npm install pnpm -g
           pnpm install
+          pnpm run build:ui
+          pnpm install
           pnpm run build:docs
 
       # 执行JamesIves/github-pages-deploy-action将项目发布到Github Pages
