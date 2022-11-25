@@ -12,7 +12,7 @@
 
 <script  lang="ts">
 import {
-  defineComponent, computed, useSlots,
+  computed, useSlots,
 } from 'vue';
 import '../style/index.less';
 import { buttonProps } from './button';

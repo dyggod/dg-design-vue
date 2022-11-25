@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <dg-button>123 <div>456</div></dg-button>
+      <dg-button></dg-button>
       <dg-button type="danger"></dg-button>
       <dg-button type="primary">789</dg-button>
       <dg-button type="warning"></dg-button>

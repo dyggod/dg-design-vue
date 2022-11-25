@@ -25,7 +25,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: ''
+        link: 'https://github.com/dyggod/dg-ui.git'
       }
     ],
 
