@@ -1,26 +1,30 @@
 @import '../../common/style/common.less';
+@import './run.less';
 
 
 
 .@{dg-prefix}-button {
   cursor: pointer;
   text-align: center;
+  font-size: 14px;
+  font-weight: 500;
   box-sizing: border-box;
+  border-radius: 4px;
+  margin: 0;
+  padding: 8px 12px;
   outline: none;
   transition: 0.1s;
   user-select: none;
   vertical-align: middle;
   border: 1px solid @border-color-base;
-  font-weight: 500;
-  padding: 8px 12px;
-  font-size: 14px;
-  border-radius: 4px;
+  -webkit-appearance: none;
 
   .text {
     border-color: transparent;
     background: transparent;
     padding-left: 0;
     padding-right: 0;
+
     &:hover {
       border-color: transparent;
       background-color: transparent;
@@ -35,10 +39,12 @@
   &-default {
     color: @color-text-default;
     background-color: @color-white;
+
     &:hover {
       background-color: lighten(rgb(color(@color-primary)), 10%);
       color: @color-primary  !important;
     }
+
     &-text {
       color: @color-text-default;
       .text();
@@ -48,9 +54,11 @@
   &-primary {
     color: @color-white;
     background-color: @color-primary;
+
     &:hover {
       background-color: lighten(rgb(color(@color-primary)), 10%);
     }
+
     &-text {
       color: @color-white;
       .text();
@@ -60,9 +68,11 @@
   &-success {
     color: @color-white;
     background-color: @color-success;
+
     &:hover {
       background-color: lighten(rgb(color(@color-success)), 10%);
     }
+
     &-text {
       color: @color-white;
       .text();
@@ -72,9 +82,11 @@
   &-warning {
     color: @color-white;
     background-color: @color-warning;
+
     &:hover {
       background-color: lighten(rgb(color(@color-warning)), 10%);
     }
+
     &-text {
       color: @color-white;
       .text();
@@ -84,9 +96,11 @@
   &-danger {
     color: @color-white;
     background-color: @color-danger;
+
     &:hover {
       background-color: lighten(rgb(color(@color-danger)), 10%);
     }
+
     &-text {
       color: @color-white;
       .text();
@@ -96,12 +110,19 @@
   &-info {
     color: @color-white;
     background-color: @color-info;
+
     &:hover {
       background-color: lighten(rgb(color(@color-info)), 10%);
     }
+
     &-text {
       color: @color-white;
       .text();
     }
+  }
+
+  // **** dgFun style ****
+  &-run {
+    .run();
   }
 }

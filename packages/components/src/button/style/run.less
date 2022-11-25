@@ -1,0 +1,184 @@
+.run {
+  @color: @color-white;
+
+  @padding-y: 4px;
+  @padding-x: 36px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.4s;
+  transform: translateY(var(--y, 0));
+
+  .running {
+    @scale: 0.64;
+    @duration: 0.8s;
+
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 105%;
+    transition: transform 0.4s ease;
+    transform: translateX(var(--running-x, -8px)) scale(@scale);
+
+    .outer {
+      animation: outer @duration linear infinite;
+      .body {
+        height: 15px;
+        width: 8px;
+        border-radius: 4px;
+        transform-origin: 4px 11px;
+        position: relative;
+        transform: rotate(32deg);
+        animation: body @duration linear infinite;
+        &:before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 4px;
+          bottom: 16px;
+          left: 0;
+          position: absolute;
+          background: @color;
+        }
+        .arm,
+        .arm:before,
+        .leg,
+        .leg:before {
+          content: "";
+          width: var(--w, 11px);
+          height: 4px;
+          top: var(--t, 0);
+          left: var(--l, 2px);
+          border-radius: 2px;
+          transform-origin: 2px 2px;
+          position: absolute;
+          background: var(--c, @color);
+          transform: rotate(var(--r, 0deg));
+          animation: arm-leg @duration linear infinite;
+        }
+
+        .arm {
+          &:before {
+            --l: 7px;
+            animation: arm-b @duration linear infinite;
+          }
+          &.front {
+            --r: 24deg;
+            --r-to: 164deg;
+            &:before {
+              --r: -48deg;
+              --r-to: -36deg;
+            }
+          }
+          &.behind {
+            --r: 164deg;
+            --r-to: 24deg;
+            &:before {
+              --r: -36deg;
+              --r-to: -48deg;
+            }
+          }
+        }
+
+        .leg {
+          --w: 12px;
+          --t: 11px;
+          &:before {
+            --t: 0;
+            --l: 8px;
+          }
+          &.front {
+            --r: 10deg;
+            --r-to: 108deg;
+            &:before {
+              --r: 18deg;
+              --r-to: 76deg;
+            }
+          }
+          &.behind {
+            --r: 108deg;
+            --r-to: 10deg;
+            --c: none;
+            &:before {
+              --c: @color;
+              --r: 76deg;
+              --r-to: 18deg;
+            }
+            &:after {
+              content: "";
+              top: 0;
+              right: 0;
+              height: 4px;
+              width: 6px;
+              clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
+              border-radius: 0 2px 2px 0;
+              position: absolute;
+              background: @color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  span {
+    display: block;
+    transition: transform 0.4s ease;
+    transform: translateX(var(--x, 0));
+    padding: 0 @padding-x;
+
+    &.default {
+      --x: var(--default-x, 0);
+    }
+
+    &.active {
+      --x: var(--active-x, -100%);
+      margin-top: -23px;
+    }
+  }
+
+  &:hover {
+    --b: var(--background-hover);
+    --y: -2px;
+    --default-x: 4px;
+    --running-x: @padding-x;
+  }
+
+  &:active {
+    --y: 1px;
+  }
+
+  .active:hover {
+    --b: var(--background-active-hover);
+  }
+}
+
+@keyframes outer {
+  50% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(4px);
+  }
+}
+@keyframes body {
+  50% {
+    transform: rotate(16deg);
+  }
+  25%,
+  75% {
+    transform: rotate(24deg);
+  }
+}
+@keyframes arm-leg {
+  50% {
+    transform: rotate(var(--r-to));
+  }
+}
+@keyframes arm-b {
+  30%,
+  70% {
+    transform: rotate(var(--r-to));
+  }
+}

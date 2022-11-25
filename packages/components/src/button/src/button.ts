@@ -9,6 +9,10 @@ export const buttonTypes = [
   'danger',
 ];
 
+export enum ButtonDgFun {
+  Run = 'run',
+}
+
 export const buttonProps = {
   type: {
     type: String,
@@ -17,6 +21,10 @@ export const buttonProps = {
   size: {
     type: String,
     default: 'medium',
+  },
+  dgFun: {
+    type: String,
+    default: '',
   },
 };
 
