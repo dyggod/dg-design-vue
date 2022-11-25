@@ -8,6 +8,13 @@ export const sidebar = {
         { text: "快速上手", link: "/instructions/quickstart" },
       ],
     },
+    {
+      text: "组件列表",
+      link: "/components/",
+      items: [
+        { text: "组件列表", link: "/components/button" },
+      ],
+    },
   ],
   "/components/": [
     {
