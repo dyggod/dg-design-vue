@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /develop-record/
+      link: /instructions/install
     - theme: alt
       text: 在Github上查看
       link: https://github.com/dyggod/dg-ui.git
