@@ -39,6 +39,9 @@
 
 使用 dgFun 定义趣味按钮
 
+### 跑动的小人儿~
+<br>
+
 <div class="example">
   <div>
     <dg-button dgFun="run">dg-ui</dg-button>
