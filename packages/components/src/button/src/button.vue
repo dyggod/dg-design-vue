@@ -10,10 +10,19 @@
   </button>
 </template>
 
-<script setup lang='ts'>
-import { computed, useSlots } from 'vue';
+<script  lang="ts">
+import {
+  defineComponent, computed, useSlots,
+} from 'vue';
 import '../style/index.less';
 import { buttonProps } from './button';
+
+export default {
+  name: 'DgButton',
+};
+</script>
+
+<script setup lang='ts'>
 
 const props = defineProps(buttonProps);
 

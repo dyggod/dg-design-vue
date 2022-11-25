@@ -1,17 +1,16 @@
 <template>
   <div>
     <div>
-      <Button>123 <div>456</div></Button>
-      <Button type="danger"></Button>
-      <Button type="primary">789</Button>
-      <Button type="warning"></Button>
-      <Button type="info"></Button>
+      <dg-button>123 <div>456</div></dg-button>
+      <dg-button type="danger"></dg-button>
+      <dg-button type="primary">789</dg-button>
+      <dg-button type="warning"></dg-button>
+      <dg-button type="info"></dg-button>
     </div>
   </div>
 </template>
 
 <script setup lang='ts'>
-import { Button } from '@dyggod/dg-ui'
 </script>
 
 <style lang="less">
