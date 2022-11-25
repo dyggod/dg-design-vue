@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  <a href="https://www.antdv.com/" target="_blank">DG-Design-Vue</a>
+  <a href="https://dyggod.github.io/dg-ui/" target="_blank">DG-Design-Vue</a>
 </h1>
 
 <p align="center">
