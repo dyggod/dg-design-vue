@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:example": "pnpm run -C examples dev",
+    "dev:docs": "pnpm run -C docs docs:dev",
     "build:ui": "pnpm run -C packages/components build",
     "build:docs": "pnpm run -C docs docs:build",
     "test": "test"

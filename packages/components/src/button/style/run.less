@@ -2,7 +2,7 @@
   @color: @color-white;
 
   @padding-y: 4px;
-  @padding-x: 36px;
+  @padding-x: 12px;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -141,7 +141,7 @@
     --b: var(--background-hover);
     --y: -2px;
     --default-x: 4px;
-    --running-x: @padding-x;
+    --running-x: calc(@padding-x * 2);
   }
 
   &:active {

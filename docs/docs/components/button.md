@@ -34,3 +34,34 @@
 ```
 
 :::
+
+## dgFun趣味按钮
+
+使用 dgFun 定义趣味按钮
+
+<div class="example">
+  <div>
+    <dg-button dgFun="run">dg-ui</dg-button>
+    <dg-button dgFun="run" type="primary"></dg-button>
+    <dg-button dgFun="run" type="success"></dg-button>
+    <dg-button dgFun="run" type="warning"></dg-button>
+    <dg-button dgFun="run" type="danger"></dg-button>
+    <dg-button dgFun="run" type="info"></dg-button>
+  </div>
+</div>
+
+::: details 显示代码
+
+```vue
+<template>
+  <div>
+    <div>
+    <dg-button dgFun="run">dg-ui</dg-button>
+    <dg-button dgFun="run" type="primary"></dg-button>
+    <dg-button dgFun="run" type="success"></dg-button>
+    <dg-button dgFun="run" type="warning"></dg-button>
+    <dg-button dgFun="run" type="danger"></dg-button>
+    <dg-button dgFun="run" type="info"></dg-button>
+  </div>
+  </div>
+```
