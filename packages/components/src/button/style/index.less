@@ -1,5 +1,107 @@
 @import '../../common/style/common.less';
 
-.@{prefix}-button {
-  color: red;
+
+
+.@{dg-prefix}-button {
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  user-select: none;
+  vertical-align: middle;
+  border: 1px solid @border-color-base;
+  font-weight: 500;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+
+  .text {
+    border-color: transparent;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    &:hover {
+      border-color: transparent;
+      background-color: transparent;
+    }
+  }
+
+  &:hover {
+    // 背景色变浅
+    background-color: lighten(rgb(color(@color-primary)), 10%);
+  }
+
+  &-default {
+    color: @color-text-default;
+    background-color: @color-white;
+    &:hover {
+      background-color: lighten(rgb(color(@color-primary)), 10%);
+      color: @color-primary  !important;
+    }
+    &-text {
+      color: @color-text-default;
+      .text();
+    }
+  }
+
+  &-primary {
+    color: @color-white;
+    background-color: @color-primary;
+    &:hover {
+      background-color: lighten(rgb(color(@color-primary)), 10%);
+    }
+    &-text {
+      color: @color-white;
+      .text();
+    }
+  }
+
+  &-success {
+    color: @color-white;
+    background-color: @color-success;
+    &:hover {
+      background-color: lighten(rgb(color(@color-success)), 10%);
+    }
+    &-text {
+      color: @color-white;
+      .text();
+    }
+  }
+
+  &-warning {
+    color: @color-white;
+    background-color: @color-warning;
+    &:hover {
+      background-color: lighten(rgb(color(@color-warning)), 10%);
+    }
+    &-text {
+      color: @color-white;
+      .text();
+    }
+  }
+
+  &-danger {
+    color: @color-white;
+    background-color: @color-danger;
+    &:hover {
+      background-color: lighten(rgb(color(@color-danger)), 10%);
+    }
+    &-text {
+      color: @color-white;
+      .text();
+    }
+  }
+
+  &-info {
+    color: @color-white;
+    background-color: @color-info;
+    &:hover {
+      background-color: lighten(rgb(color(@color-info)), 10%);
+    }
+    &-text {
+      color: @color-white;
+      .text();
+    }
+  }
 }

@@ -1,9 +1,47 @@
-@prefix: dg;
+@dg-prefix: dg;
 
-:root {
-  --color-primary: #1e88e5;
-}
+@dg-color-primary: #1e88e5;
+@dg-color-success: #67c23A;
+@dg-color-warning: #E6A23C;
+@dg-color-danger: #F56C6C;
+@dg-color-error: #F56C6C;
+@dg-color-info: #909399;
+@dg-color-white: #fff;
+@dg-color-black: #000;
+@dg-color-gray: #909399;
+@dg-color-gray-light: #ebeef5;
+@dg-color-gray-lighter: #f5f7fa;
+@dg-color-gray-dark: #303133;
 
 #colors() {
-  primary: var(--color-primary);
+  primary: @dg-color-primary;
+  success: @dg-color-success;
+  warning: @dg-color-warning;
+  danger: @dg-color-danger;
+  error: @dg-color-error;
+  info: @dg-color-info;
+
+  background-white: @dg-color-white;
+
+  text-default: @dg-color-gray-dark;
+  text-light: @dg-color-gray-lighter;
+
+  border-base: @dg-color-gray-lighter;
 }
+
+// **** Button/Background ****
+@color-white: #colors[background-white];
+@color-primary: #colors[primary];
+@color-success: #colors[success];
+@color-warning: #colors[warning];
+@color-danger: #colors[danger];
+@color-error: #colors[error];
+@color-info: #colors[info];
+
+// **** 文字颜色 ****
+@color-text-default: #colors[text-default];
+@color-text-light: #colors[text-light];
+
+
+// **** 边框/线 ****
+@border-color-base: #colors[border-base];

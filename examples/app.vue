@@ -1,8 +1,11 @@
 <template>
   <div>
-    启动测试
     <div>
-      <Button></Button>
+      <Button>123 <div>456</div></Button>
+      <Button type="danger"></Button>
+      <Button type="primary">789</Button>
+      <Button type="warning"></Button>
+      <Button type="info"></Button>
     </div>
   </div>
 </template>
