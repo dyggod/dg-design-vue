@@ -1,5 +1,5 @@
 module.exports = {
-  header: '密码服务平台-前端 更新历史记录',
+  header: 'DG-UI CHANGELOG',
   types: [
     { type: 'feat', section: '✨ Features | 新功能' },
     { type: 'fix', section: '🐛 Bug Fixes | Bug 修复' },
