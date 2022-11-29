@@ -1,31 +1,34 @@
 <template>
-  <button
-    class="dg-button"
-    :class="classes.btClass"
-  >
-    <span :class="classes.textClass">
-      <slot v-if="hasSlot" />
-      <span v-else>{{ textContent }}</span>
-    </span>
-    <div
-      v-if="isRunning"
-      class="running"
+  <div :class="classes.containerClass">
+    <button
+      class="dg-button"
+      :class="classes.btClass"
+      @click="click"
     >
-      <div class="outer">
-        <div class="body">
-          <div class="arm behind" />
-          <div class="arm front" />
-          <div class="leg behind" />
-          <div class="leg front" />
+      <span :class="classes.textClass">
+        <slot v-if="hasSlot" />
+        <span v-else>{{ textContent }}</span>
+      </span>
+      <div
+        v-if="isRunning"
+        class="running"
+      >
+        <div class="outer">
+          <div class="body">
+            <div class="arm behind" />
+            <div class="arm front" />
+            <div class="leg behind" />
+            <div class="leg front" />
+          </div>
         </div>
       </div>
-    </div>
-  </button>
+    </button>
+  </div>
 </template>
 
 <script  lang="ts">
 import {
-  computed, useSlots,
+  reactive, computed, useSlots, defineEmits,
 } from 'vue';
 import '../style/index.less';
 import { buttonProps, ButtonDgFun } from './button';
@@ -38,19 +41,30 @@ export default {
 <script setup lang='ts'>
 
 const props = defineProps(buttonProps);
+const emits = defineEmits(['click']);
+
+interface ClassAll {
+  containerClass: string;
+  btClass: string;
+  textClass: string;
+}
+
+const classes = reactive<ClassAll>({
+  containerClass: '',
+  btClass: '',
+  textClass: '',
+});
 
 // 根据props的值，动态设置class
-const classes = computed(() => {
-  const {
-    type, size, dgFun,
-  } = props;
-  const btClass = `dg-button-${type} dg-button-${size} dg-button-${dgFun}`;
+(function genClasses() {
+  const { type, size, dgFun } = props;
+  const containerClass = `dg-button-${type}-container dg-button-${dgFun}-container`;
+  const btClass = `dg-button-${props.type} dg-button-${props.size} dg-button-${props.dgFun}`;
   const textClass = `dg-button-${type}-text`;
-  return {
-    btClass,
-    textClass,
-  };
-});
+  classes.containerClass = containerClass;
+  classes.btClass = btClass;
+  classes.textClass = textClass;
+}());
 
 // 根据props text的值，动态设置文本
 const slotDefault = useSlots().default;
@@ -65,10 +79,19 @@ const isRunning = computed(() => {
   return dgFun === ButtonDgFun.Run;
 });
 
+// dgButton被点击后，自身的点击事件影响
+const click = () => {
+  const { dgFun } = props;
+  if (dgFun === ButtonDgFun.Run) {
+    // do something
+  } else if (dgFun === ButtonDgFun.Jump) {
+    // 移除jump的动画
+    const jumpClass = `dg-button-${ButtonDgFun.Jump}`;
+    classes.btClass = classes.btClass.replace(jumpClass, '');
+  }
+  emits('click');
+};
 </script>
 
 <style lang="less">
-.dg-button {
-  font-weight: bolder;
-}
 </style>
