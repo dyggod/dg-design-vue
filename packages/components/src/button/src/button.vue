@@ -1,29 +1,27 @@
 <template>
-  <div :class="classes.containerClass">
-    <button
-      class="dg-button"
-      :class="classes.btClass"
-      @click="click"
+  <button
+    class="dg-button"
+    :class="classes.btClass"
+    @click="click"
+  >
+    <span :class="classes.textClass">
+      <slot v-if="hasSlot" />
+      <span v-else>{{ textContent }}</span>
+    </span>
+    <div
+      v-if="isRunning"
+      class="running"
     >
-      <span :class="classes.textClass">
-        <slot v-if="hasSlot" />
-        <span v-else>{{ textContent }}</span>
-      </span>
-      <div
-        v-if="isRunning"
-        class="running"
-      >
-        <div class="outer">
-          <div class="body">
-            <div class="arm behind" />
-            <div class="arm front" />
-            <div class="leg behind" />
-            <div class="leg front" />
-          </div>
+      <div class="outer">
+        <div class="body">
+          <div class="arm behind" />
+          <div class="arm front" />
+          <div class="leg behind" />
+          <div class="leg front" />
         </div>
       </div>
-    </button>
-  </div>
+    </div>
+  </button>
 </template>
 
 <script  lang="ts">
@@ -44,13 +42,11 @@ const props = defineProps(buttonProps);
 const emits = defineEmits(['click']);
 
 interface ClassAll {
-  containerClass: string;
   btClass: string;
   textClass: string;
 }
 
 const classes = reactive<ClassAll>({
-  containerClass: '',
   btClass: '',
   textClass: '',
 });
@@ -58,10 +54,8 @@ const classes = reactive<ClassAll>({
 // 根据props的值，动态设置class
 (function genClasses() {
   const { type, size, dgFun } = props;
-  const containerClass = `dg-button-${type}-container dg-button-${dgFun}-container`;
   const btClass = `dg-button-${props.type} dg-button-${props.size} dg-button-${props.dgFun}`;
   const textClass = `dg-button-${type}-text`;
-  classes.containerClass = containerClass;
   classes.btClass = btClass;
   classes.textClass = textClass;
 }());

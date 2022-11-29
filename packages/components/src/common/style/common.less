@@ -1,5 +1,6 @@
 @dg-prefix: dg;
 
+// **** color 颜色 ****
 @dg-color-primary: #1e88e5;
 @dg-color-success: #67c23A;
 @dg-color-warning: #E6A23C;
@@ -26,7 +27,27 @@
   text-default: @dg-color-gray-dark;
   text-light: @dg-color-gray-lighter;
 
-  border-base: @dg-color-gray-lighter;
+  border-base: @dg-color-gray-light;
+
+}
+
+// **** space 间距 ****
+@dg-space-xxs: 2px;
+@dg-space-xs: 4px;
+@dg-space-sm: 8px;
+@dg-space-md: 12px;
+@dg-space-lg: 16px;
+@dg-space-xl: 20px;
+@dg-space-xxl: 24px;
+
+#space() {
+  xxs: @dg-space-xxs;
+  xs: @dg-space-xs;
+  small: @dg-space-sm;
+  medium: @dg-space-md;
+  large: @dg-space-lg;
+  xl: @dg-space-xl;
+  xxl: @dg-space-xxl;
 }
 
 // **** Button/Background ****
@@ -37,6 +58,7 @@
 @color-danger: #colors[danger];
 @color-error: #colors[error];
 @color-info: #colors[info];
+@space-btn-margin: #space[xxs];
 
 // **** 文字颜色 ****
 @color-text-default: #colors[text-default];
@@ -45,3 +67,8 @@
 
 // **** 边框/线 ****
 @border-color-base: #colors[border-base];
+@border-color-light: #colors[border-base];
+
+
+
+
