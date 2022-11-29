@@ -48,8 +48,7 @@ const nextVersion = generateVersion(type);
 componentsPackageJson.version = nextVersion;
 fs.writeFileSync(path.resolve(__dirname, '../packages/components/package.json'), JSON.stringify(componentsPackageJson, null, 2));
 mainPackage.version = nextVersion;
-fs.writeFileSync(path.resolve(__dirname, '../package.json'), JSON.stringify(mainPackage, null, 2));
-execSync(`git add . && git commit -m "chore: 同步版本${nextVersion}"`);
+execSync('git add . ');
 
 console.log('\x1b[33m%s\x1b[0m', '开始构建组件库...');
 execSync('npm run build', { cwd: path.resolve(__dirname, '../packages/components'), stdio: 'inherit' });
@@ -68,6 +67,8 @@ execSync(
   `standard-version --release-as ${type}`,
   { cwd: path.resolve(__dirname, '../'), stdio: 'inherit' },
 );
+fs.writeFileSync(path.resolve(__dirname, '../package.json'), JSON.stringify(mainPackage, null, 2));
+execSync(`git add . && git commit -m "chore: update main package.json for ${nextVersion}"`);
 console.log('\x1B[32m%s\x1B[0m', '版本升级完成');
 
 console.log('\x1b[33m%s\x1b[0m', '开始push代码...');
