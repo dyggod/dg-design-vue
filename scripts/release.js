@@ -44,9 +44,11 @@ const args = process.argv.slice(2);
 const [type] = args;
 const nextVersion = generateVersion(type);
 
-// 同步至packages/components下的package.json
+// 同步至packages/components下的package.json和根目录下的package.json
 componentsPackageJson.version = nextVersion;
 fs.writeFileSync(path.resolve(__dirname, '../packages/components/package.json'), JSON.stringify(componentsPackageJson, null, 2));
+mainPackage.version = nextVersion;
+fs.writeFileSync(path.resolve(__dirname, '../package.json'), JSON.stringify(mainPackage, null, 2));
 execSync(`git add . && git commit -m "同步 ${nextVersion}"`);
 
 console.log('\x1b[33m%s\x1b[0m', '开始构建组件库...');

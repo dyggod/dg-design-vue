@@ -9,7 +9,8 @@
     "build:ui": "pnpm run -C packages/components build",
     "build:docs": "pnpm run -C docs docs:build",
     "test": "test",
-    "release": "node ./scripts/release.js"
+    "release": "node ./scripts/release.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
   },
   "homepage": "https://github.com/dyggod/dg-ui#readme",
   "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "@vitejs/plugin-vue": "^3.2.0",
@@ -36,6 +39,7 @@
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-vue": "^9.7.0",
+    "husky": "^8.0.2",
     "less": "^4.1.3",
     "standard-version": "^9.5.0",
     "ts-node": "^10.9.1",
