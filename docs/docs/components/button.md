@@ -68,3 +68,46 @@
   </div>
   </div>
 ```
+
+:::
+
+### 跳跃的按钮~（你逮不到我）
+
+当你点到按钮时，它就乖乖不动了
+
+<div class="example" style="height:200px">
+  <div style="display:flex">
+    <div style="width: 300px">
+      <dg-button dgFun="jump" type="primary">dg-ui</dg-button>
+    </div>
+    <div style="width: 300px">
+      <dg-button dgFun="jump" type="danger"></dg-button>
+    </div>
+  </div>
+</div>
+
+::: details 显示代码
+
+```vue
+<template>
+  <div style="display:flex">
+    <div style="width: 300px">
+      <dg-button dgFun="jump" type="primary">dg-ui</dg-button>
+    </div>
+    <div style="width: 300px">
+      <dg-button dgFun="jump" type="danger"></dg-button>
+    </div>
+  </div>
+  </div>
+```
+
+:::
+
+## Button API
+
+### Button 属性
+
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| --- | --- | --- | --- | --- |
+| type | 按钮类型 | string | primary / success / warning / danger / info | - |
+| dgFun | 按钮趣味样式 | string | run / jump | - |

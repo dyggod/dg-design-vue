@@ -8,6 +8,7 @@
     "dev:docs": "pnpm run -C docs docs:dev",
     "build:ui": "pnpm run -C packages/components build",
     "build:docs": "pnpm run -C docs docs:build",
+    "publish": "release-it",
     "test": "test"
   },
   "repository": {
@@ -36,6 +37,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-vue": "^9.7.0",
     "less": "^4.1.3",
+    "release-it": "^15.5.0",
     "typescript": "^4.9.3",
     "unplugin-vue-define-options": "^0.12.8",
     "vite": "^3.2.4",
