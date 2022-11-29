@@ -1,4 +1,22 @@
 DG-UI CHANGELOG
+### [1.0.8](https://github.com/dyggod/dg-ui/compare/v1.0.6...v1.0.8) (2022-11-29)
+
+
+### 👷 Continuous Integration | CI 配置
+
+* 添加husky和commitlint ([f871ec5](https://github.com/dyggod/dg-ui/commit/f871ec5a2659430a93ccfe2fbb7cc56b1ea1cdac))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* fix ([978e6b6](https://github.com/dyggod/dg-ui/commit/978e6b69175a94bdd819597c2a837a93ffd23f25))
+* release fix ([7daf512](https://github.com/dyggod/dg-ui/commit/7daf512f5e5891feedbaf57f93d8b298884b25bb))
+* release.js ([e395230](https://github.com/dyggod/dg-ui/commit/e395230853271850a06ed10978846040b09badfc))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 同步版本1.0.7 ([d91b9c8](https://github.com/dyggod/dg-ui/commit/d91b9c84ea5b0f4b45c3e3fdbf5887158956a816))
 
 ### 1.0.6 (2022-11-29)
 
