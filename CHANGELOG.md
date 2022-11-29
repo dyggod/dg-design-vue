@@ -1,5 +1,5 @@
 DG-UI CHANGELOG
-### [1.0.8](https://github.com/dyggod/dg-ui/compare/v1.0.6...v1.0.8) (2022-11-29)
+### [1.0.7](https://github.com/dyggod/dg-ui/compare/v1.0.6...v1.0.8) (2022-11-29)
 
 
 ### 👷 Continuous Integration | CI 配置
