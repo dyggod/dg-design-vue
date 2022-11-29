@@ -109,5 +109,5 @@
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
-| type | 按钮类型 | string | primary / success / warning / danger / info | - |
-| dgFun | 按钮趣味样式 | string | run / jump | - |
+| type | 按钮类型 | _string_ | primary / success / warning / danger / info | - |
+| dgFun | 按钮趣味样式 | _string_ | run / jump | - |
