@@ -55,7 +55,7 @@ const classes = reactive<ClassAll>({
 (function genClasses() {
   const { type, size, dgFun } = props;
   const btClass = `dg-button-${props.type} dg-button-${props.size} dg-button-${props.dgFun}`;
-  const textClass = `dg-button-${type}-text`;
+  const textClass = `dg-button-text dg-button-${type}-text`;
   classes.btClass = btClass;
   classes.textClass = textClass;
 }());
@@ -71,6 +71,11 @@ const textContent = computed(() => {
 const isRunning = computed(() => {
   const { dgFun } = props;
   return dgFun === ButtonDgFun.Run;
+});
+
+const isHub = computed(() => {
+  const { dgFun } = props;
+  return dgFun === ButtonDgFun.Hub;
 });
 
 // dgButton被点击后，自身的点击事件影响
