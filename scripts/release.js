@@ -57,10 +57,10 @@ console.log('\x1B[32m%s\x1B[0m', '组件库构建完成');
 
 // 发布npm包
 console.log('\x1b[33m%s\x1b[0m', '开始发布组件库...');
-// execSync(
-//   'npm publish',
-//   { cwd: path.resolve(__dirname, '../packages/components'), stdio: 'inherit' },
-// );
+execSync(
+  'npm publish',
+  { cwd: path.resolve(__dirname, '../packages/components'), stdio: 'inherit' },
+);
 console.log('\x1B[32m%s\x1B[0m', '组件库发布完成');
 
 console.log('\x1b[33m%s\x1b[0m', '开始升级版本号并更新changelog...');
@@ -71,5 +71,5 @@ execSync(
 console.log('\x1B[32m%s\x1B[0m', '版本升级完成');
 
 console.log('\x1b[33m%s\x1b[0m', '开始push代码...');
-// execSync('git push --follow-tags', { cwd: path.resolve(__dirname, '../'), stdio: 'inherit' });
+execSync('git push --follow-tags', { cwd: path.resolve(__dirname, '../'), stdio: 'inherit' });
 console.log('\x1B[32m%s\x1B[0m', '代码push完成');
