@@ -12,6 +12,7 @@ export const buttonTypes = [
 export enum ButtonDgFun {
   Run = 'run',
   Jump = 'jump',
+  Hub = 'hub',
 }
 
 export const buttonProps = {
