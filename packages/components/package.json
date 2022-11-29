@@ -10,6 +10,7 @@
   "typings": "dg-ui/lib/index.d.ts",
   "scripts": {
     "build": "vite build",
+    "release": "npm run build && release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
