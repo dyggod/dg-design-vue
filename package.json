@@ -9,7 +9,8 @@
     "build:ui": "pnpm run -C packages/components build",
     "build:docs": "pnpm run -C docs docs:build",
     "publish": "release-it",
-    "test": "test"
+    "test": "test",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/dyggod/dg-ui#readme",
   "devDependencies": {
+    "@release-it/conventional-changelog": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "@vitejs/plugin-vue": "^3.2.0",
