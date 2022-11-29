@@ -1,6 +1,6 @@
 {
   "name": "dgui",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "vue3 component ui ",
   "main": "index.js",
   "scripts": {
