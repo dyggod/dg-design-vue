@@ -1,7 +1,16 @@
 @import '../../common/style/common.less';
+@import '../../common/style/class.less';
 @import './run.less';
 @import './jump.less';
+@import './bounce.less';
 @import './hub.less';
+
+@btn-m-padding: #space[sm];
+@btn-s-padding: #space[xs];
+@btn-l-padding: #space[l];
+@btn-l-font: 14px;
+@btn-m-font: 14px;
+@btn-s-font: 12px;
 
 
 
@@ -13,7 +22,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   margin: 0 @space-btn-margin;
-  padding: 8px 12px;
+  padding: @btn-m-padding;
   line-height: 1;
   outline: none;
   transition: 0.1s;
@@ -124,6 +133,22 @@
     }
   }
 
+  // **** size style ****
+  &-medium {
+    padding: @btn-m-padding;
+    font-size: @btn-m-font;
+  }
+
+  &-small {
+    padding: @btn-s-padding;
+    font-size: @btn-s-font;
+  }
+
+  &-large {
+    padding: @btn-l-padding;
+    font-size: @btn-l-font;
+  }
+
   // **** dgFun style ****
   &-run {
     .run();
@@ -133,6 +158,10 @@
     .jump();
   }
 
+  &-duang {
+    .bounce();
+  }
+  
   &-hub {
     .hub();
   }

@@ -2,7 +2,7 @@
 
 ## 基础用法
 
-使用 type 定义按钮样式
+### 使用 type 定义按钮样式
 
 <div class="example">
   <div>
@@ -27,6 +27,42 @@
       <dg-button type="warning"></dg-button>
       <dg-button type="danger"></dg-button>
       <dg-button type="info"></dg-button>
+    </div>
+  </div>
+</template>
+```
+
+:::
+
+### 使用 size 定义按钮大小
+
+<div class="example">
+  <div>
+    <dg-button size="large">大按钮</dg-button>
+    <dg-button>默认按钮</dg-button>
+    <dg-button size="small">小按钮</dg-button>
+  </div>
+  <div>
+    <dg-button size="large" type="primary">大按钮</dg-button>
+    <dg-button type="warning">默认按钮</dg-button>
+    <dg-button size="small" type="danger">小按钮</dg-button>
+  </div>
+</div>
+
+::: details 显示代码
+
+```vue
+<template>
+  <div>
+    <div>
+      <dg-button size="large">大按钮</dg-button>
+      <dg-button>默认按钮</dg-button>
+      <dg-button size="small">小按钮</dg-button>
+    </div>
+    <div>
+      <dg-button size="large" type="primary">大按钮</dg-button>
+      <dg-button type="warning">默认按钮</dg-button>
+      <dg-button size="small" type="danger">小按钮</dg-button>
     </div>
   </div>
 </template>
@@ -104,6 +140,32 @@
 
 :::
 
+### duang~ duang~ duang~
+
+较为 Q 弹的按钮
+
+<div class="example">
+  <div>
+    <dg-button dgFun="duang" type="primary">dg-ui</dg-button>
+    <dg-button dgFun="duang" type="danger">Surprise!</dg-button>
+  </div>
+</div>
+
+::: details 显示代码
+
+```vue
+<template>
+  <div>
+    <div>
+      <dg-button dgFun="duang" type="primary">dg-ui</dg-button>
+      <dg-button dgFun="duang" type="danger">Surprise!</dg-button>
+    </div>
+  </div>
+</template>
+```
+
+:::
+
 ### 是你熟悉的 hub 吗～
 
 请小心使用它
@@ -137,4 +199,5 @@
 | 参数  | 说明         | 类型     | 可选值                                      | 默认值 |
 | ----- | ------------ | -------- | ------------------------------------------- | ------ |
 | type  | 按钮类型     | _string_ | primary / success / warning / danger / info | -      |
-| dgFun | 按钮趣味样式 | _string_ | run / jump / hub                            | -      |
+| size  | 按钮大小     | _string_ | large / small / medium                        | -      |
+| dgFun | 按钮趣味样式 | _string_ | run / jump / duang / hub                    | -      |

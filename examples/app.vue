@@ -13,9 +13,18 @@
       <dg-button dgFun="hub" type="warning">Porn</dg-button>
     </div>
     <div>
+      <dg-button type="primary" size="small" dgFun="run"></dg-button>
+      <dg-button type="primary" size="medium" dgFun="run"></dg-button>
+      <dg-button type="primary" size="large" dgFun="run"></dg-button>
+    </div>
+    <div>
       <dg-icon name="discount"></dg-icon>
       <dg-icon name="electronics"></dg-icon>
       <dg-icon name="drag"></dg-icon>
+    </div>
+    <div>
+      <dg-button type="primary" dgFun="duang">123456789101112</dg-button>
+      <dg-button type="danger" dgFun="duang">Surprise!</dg-button>
     </div>
   </div>
 </template>
