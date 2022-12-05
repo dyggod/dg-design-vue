@@ -4,9 +4,16 @@
     :class="classes.btClass"
     @click="click"
   >
+    <!--TODO: 调整固定的图标可以自定义  -->
+    <i
+      v-if="isBounce"
+      class="iconfont dg-icon-line_right dg-button-duang-icon"
+    />
     <span :class="classes.textClass">
       <slot v-if="hasSlot" />
-      <span v-else>{{ textContent }}</span>
+      <span
+        v-else
+      >{{ textContent }}</span>
     </span>
     <div
       v-if="isRunning"
@@ -71,6 +78,11 @@ const textContent = computed(() => {
 const isRunning = computed(() => {
   const { dgFun } = props;
   return dgFun === ButtonDgFun.Run;
+});
+
+const isBounce = computed(() => {
+  const { dgFun } = props;
+  return dgFun === ButtonDgFun.Bounce;
 });
 
 // dgButton被点击后，自身的点击事件影响

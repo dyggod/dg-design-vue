@@ -12,6 +12,13 @@ export const buttonTypes = [
 export enum ButtonDgFun {
   Run = 'run',
   Jump = 'jump',
+  Bounce = 'duang',
+}
+
+export enum ButtonSize {
+  Large = 'large',
+  Medium = 'medium',
+  Small = 'small',
 }
 
 export const buttonProps = {

@@ -1,0 +1,143 @@
+@bounce-init-width: 72px;
+@bounce-init-height: 32px;
+@bounce-gap: 8px;
+
+.bounce {
+  width: @bounce-init-width;
+  height: @bounce-init-height;
+  border: 0;
+  border-radius: 500px;
+  color: white;
+  position: relative;
+  text-decoration: none;
+
+  span,
+  i {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  span {
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    animation: open 400ms 1 ease-in;
+    animation-fill-mode: forwards;
+
+    span {
+      display: inline-block;
+      animation: reveal 400ms 1 ease-in;
+      animation-fill-mode: forwards;
+      left: calc(@bounce-init-width / 4);
+      top: 50%;
+      transform: translate(0, -50%);
+      max-width: 68px;
+      .line-ellipsis();
+    }
+
+    i {
+      right: #space[md];
+      transform: translate(0, -50%);
+    }
+  }
+
+  &:not(:hover) {
+    animation: close 400ms 1 ease-in;
+  }
+}
+
+@keyframes open {
+  0% {
+    width: @bounce-init-width;
+  }
+
+  20% {
+    width: @bounce-init-width + (@bounce-gap * 2);
+  }
+
+  40% {
+    width: @bounce-init-width + (@bounce-gap * 4);
+  }
+
+  60% {
+    height: @bounce-init-height - @bounce-gap;
+    width: @bounce-init-width + (@bounce-gap * 6);
+  }
+
+  70% {
+    height: @bounce-init-height + @bounce-gap;
+  }
+
+  80% {
+    height: @bounce-init-height + (@bounce-gap * 2);
+    width: @bounce-init-width + (@bounce-gap * 5);
+  }
+
+  90% {
+    height: @bounce-init-height + @bounce-gap;
+  }
+
+  100% {
+    height: @bounce-init-height;
+    width: @bounce-init-width + (@bounce-gap * 4);
+  }
+}
+
+@keyframes reveal {
+  70% {
+    height: @bounce-init-height - (@bounce-gap * 2);
+    opacity: .33;
+    width: auto;
+  }
+
+  85% {
+    width: auto;
+    height: @bounce-init-height;
+    opacity: .5;
+    transform: scale(1, 2) translate(0, -50%);
+  }
+
+  100% {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transform: scale(1, 1) translate(0, -50%);
+  }
+}
+
+@keyframes close {
+  0% {
+    height: @bounce-init-height - (@bounce-gap * 2);
+    width: @bounce-init-width + (@bounce-gap * 4);
+  }
+
+  20% {
+    height: @bounce-init-height - @bounce-gap;
+    width: @bounce-init-width + (@bounce-gap * 3);
+  }
+
+  40% {
+    height: @bounce-init-height;
+    width: @bounce-init-width + (@bounce-gap * 2);
+  }
+
+  60% {
+    width: @bounce-init-width + @bounce-gap;
+  }
+
+  70% {
+    width: @bounce-init-width + (@bounce-gap / 2);
+  }
+
+  80% {
+  }
+
+  100% {
+    width: @bounce-init-width;
+  }
+}
