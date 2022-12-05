@@ -13,6 +13,7 @@ export enum ButtonDgFun {
   Run = 'run',
   Jump = 'jump',
   Bounce = 'duang',
+  Hub = 'hub',
 }
 
 export enum ButtonSize {

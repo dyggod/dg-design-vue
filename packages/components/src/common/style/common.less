@@ -13,6 +13,7 @@
 @dg-color-gray-light: #ebeef5;
 @dg-color-gray-lighter: #f5f7fa;
 @dg-color-gray-dark: #303133;
+@dg-color-hub: #ea9c3e;
 
 #colors() {
   primary: @dg-color-primary;
@@ -21,8 +22,10 @@
   danger: @dg-color-danger;
   error: @dg-color-error;
   info: @dg-color-info;
+  hub: @dg-color-hub;
 
   background-white: @dg-color-white;
+  background-black: @dg-color-black;
 
   text-default: @dg-color-gray-dark;
   text-light: @dg-color-gray-lighter;
@@ -52,12 +55,14 @@
 
 // **** Button/Background ****
 @color-white: #colors[background-white];
+@color-black: #colors[background-black];
 @color-primary: #colors[primary];
 @color-success: #colors[success];
 @color-warning: #colors[warning];
 @color-danger: #colors[danger];
 @color-error: #colors[error];
 @color-info: #colors[info];
+@color-hub: #colors[hub];
 @space-btn-margin: #space[xxs];
 
 // **** 文字颜色 ****

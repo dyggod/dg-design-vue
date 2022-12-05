@@ -3,6 +3,7 @@
 @import './run.less';
 @import './jump.less';
 @import './bounce.less';
+@import './hub.less';
 
 @btn-m-padding: #space[sm];
 @btn-s-padding: #space[xs];
@@ -35,7 +36,6 @@
     background: transparent;
     padding-left: 0;
     padding-right: 0;
-    display: flex;
 
     &:hover {
       border-color: transparent;
@@ -160,5 +160,9 @@
 
   &-duang {
     .bounce();
+  }
+  
+  &-hub {
+    .hub();
   }
 }

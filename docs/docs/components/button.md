@@ -142,7 +142,7 @@
 
 ### duang~ duang~ duang~
 
-较为Q弹的按钮
+较为 Q 弹的按钮
 
 <div class="example">
   <div>
@@ -166,6 +166,32 @@
 
 :::
 
+### 是你熟悉的 hub 吗～
+
+请小心使用它
+
+<div class="example">
+  <div>
+    <dg-button dgFun="hub">dg-ui</dg-button>
+    <dg-button dgFun="hub" type="success"></dg-button>
+    <dg-button dgFun="hub" type="primary">Porn</dg-button>
+  </div>
+</div>
+
+::: details 显示代码
+
+```vue
+<template>
+  <div>
+    <dg-button dgFun="hub">dg-ui</dg-button>
+    <dg-button dgFun="hub" type="success"></dg-button>
+    <dg-button dgFun="hub" type="primary">Porn</dg-button>
+  </div>
+</template>
+```
+
+:::
+
 ## Button API
 
 ### Button 属性
@@ -173,4 +199,5 @@
 | 参数  | 说明         | 类型     | 可选值                                      | 默认值 |
 | ----- | ------------ | -------- | ------------------------------------------- | ------ |
 | type  | 按钮类型     | _string_ | primary / success / warning / danger / info | -      |
-| dgFun | 按钮趣味样式 | _string_ | run / jump / duang                                 | -      |
+| size  | 按钮大小     | _string_ | large / small / medium                        | -      |
+| dgFun | 按钮趣味样式 | _string_ | run / jump / duang / hub                    | -      |
