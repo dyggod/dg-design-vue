@@ -1,4 +1,25 @@
 DG-UI CHANGELOG
+### [1.0.11](https://github.com/dyggod/dg-ui/compare/v1.0.9...v1.0.11) (2022-12-07)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* **release:** 1.0.10 ([10ec170](https://github.com/dyggod/dg-ui/commit/10ec17091840bb2f393a86db8e23e1b9fe06e299))
+* update main package.json for 1.0.10 ([9288ba3](https://github.com/dyggod/dg-ui/commit/9288ba33895c4cf163314158c4c4e8142818ef9d))
+* update main package.json for 1.0.9 ([a015a0a](https://github.com/dyggod/dg-ui/commit/a015a0ac01c9c6f34853270335d8c85bc1861d26))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修改文档主色 ([3c3c122](https://github.com/dyggod/dg-ui/commit/3c3c12261e640f59fb5032ea73b774e1f3cf20a6))
+
+
+### ✨ Features | 新功能
+
+* 添加duang按钮 ([76a599c](https://github.com/dyggod/dg-ui/commit/76a599c9a7a59cad12605120e854567b47ae7da5))
+* 添加magic card ([cea6708](https://github.com/dyggod/dg-ui/commit/cea67082cc7c1ae7d69daa1a93fb014ace453593))
+* 完成hub按钮 ([06de85e](https://github.com/dyggod/dg-ui/commit/06de85eee568cfd584edc1b88173f6114524c865))
+
 ### [1.0.10](https://github.com/dyggod/dg-ui/compare/v1.0.9...v1.0.10) (2022-11-29)
 
 
