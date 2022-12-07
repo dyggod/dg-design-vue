@@ -23,6 +23,7 @@ export const sidebar = {
       items: [
         { text: "Button 按钮", link: "/components/button" },
         { text: "Icon 图标", link: "/components/icon" },
+        { text: "Magic Card 卡片", link: "/components/mgcard" },
       ],
     },
   ],
