@@ -19,6 +19,7 @@ export default defineConfig({
 
   lastUpdated: true,
   themeConfig: {
+    logo: '/logo@4x.png',
     lastUpdatedText: '最后更新时间',
     nav,
     sidebar,
@@ -28,6 +29,10 @@ export default defineConfig({
         link: 'https://github.com/dyggod/dg-ui.git'
       }
     ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2022 dyggod'
+    }
 
   },
   markdown: {

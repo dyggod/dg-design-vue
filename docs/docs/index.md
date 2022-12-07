@@ -19,11 +19,12 @@ hero:
 features:
   - icon: 💡
     title: "Vue3组件库"
-    details: 整理了个人开发或开源中遇到的前端、数据库、后端等问题的解决方案或搭建记录
+    details: 适用于Vue3的组件库，基于Vue3 Composition API开发
   - icon: 🧰
     title: 持续更新
-    details: 系统性整理的一些前后端知识，可作为一些技术栈的使用指南
+    details: 会持续关注前端技术的发展，不断更新组件库
   - icon: 🤣
     title: 奇奇怪怪
-    details: 个人开源的组件库，如果你感兴趣可以安装使用
+    details: 个人开源的组件库，包含了一些有趣搞笑的组件，欢迎使用
+footer: MIT Licensed | © 2022 dyggod
 ---
