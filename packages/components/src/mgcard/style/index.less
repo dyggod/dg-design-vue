@@ -1,0 +1,94 @@
+@import '../../common/style/common.less';
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+@mg-card-height: 200px;
+@mg-card-width: calc(@mg-card-height / 1.5);
+@mg-card-min-height: 200px;
+@mg-card-min-width: calc(@mg-card-min-height / 1.5);
+@mg-card-max-height: 500px;
+@mg-card-max-width: calc(@mg-card-max-height / 1.5);
+
+.@{dg-prefix}-mgcard {
+  background: #191c29;
+  width: @mg-card-width;
+  height: @mg-card-height;
+  min-height: @mg-card-min-height;
+  min-width: @mg-card-min-width;
+  max-height: @mg-card-max-height;
+  max-width: @mg-card-max-width;
+  padding: #space[xs];
+  position: relative;
+  border-radius: #space[sm];
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: #font-size[md];
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+  transform-style: preserve-3d;
+}
+
+.@{dg-prefix}-mgcard:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+
+.@{dg-prefix}-mgcard:hover:before,
+.@{dg-prefix}-mgcard:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.@{dg-prefix}-mgcard::before {
+  content: "";
+  width: 106%;
+  height: 104%;
+  border-radius: 8px;
+  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) !important;
+  position: absolute;
+  transform: translateZ(-1px);
+  top: -2%;
+  left: -3%;
+  animation: spin 2.5s linear infinite;
+}
+
+.@{dg-prefix}-mgcard::after {
+  position: absolute;
+  content: "";
+  top: calc(@mg-card-height / 6);
+  left: 0;
+  right: 0;
+  transform: translateZ(-1px);
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(@mg-card-height / 6));
+  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) !important;
+  opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+
+  100% {
+    --rotate: 360deg;
+  }
+}
