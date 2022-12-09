@@ -49,7 +49,7 @@ $ pnpm install @dyggod/dg-ui
 // main.ts
 import { createApp } from 'vue'
 import DgUi from '@dyggod/dg-ui'
-import '@dyggod/dg-ui/dg-ui/dist/style.css'
+import '@dyggod/dg-ui/dg-ui/style.css'
 import App from './App.vue'
 
 const app = createApp(App)
