@@ -8,12 +8,30 @@
       class="dg-switch-content"
       :for="inputId"
     >
+      <i
+        v-if="isLight"
+        ref="bulb"
+        :class="`${isChecked ? 'light-active' : ''} bulb`"
+      >
+        <span class="bulb-center" />
+        <span class="filament-1" />
+        <span class="filament-2" />
+        <span class="reflections">
+          <span />
+        </span>
+        <span class="sparks">
+          <i class="spark1" />
+          <i class="spark2" />
+          <i class="spark3" />
+          <i class="spark4" />
+        </span>
+      </i>
       <input
         :id="inputId"
         ref="input"
         type="checkbox"
         role="switch"
-        :aria-checked="isChecked"
+        class="dg-switch-input"
         :aria-disabled="switchDisabled"
         :checked="isChecked"
         :true-value="true"
@@ -34,7 +52,7 @@ import {
   ref, computed, onMounted, nextTick, defineEmits, watch, reactive,
 } from 'vue';
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '#/event';
-import { switchProps, switchEmits } from './switch';
+import { switchProps, switchEmits, SwitchDgFun } from './switch';
 import '../style/index.less';
 
 export default {
@@ -47,6 +65,7 @@ const props = defineProps(switchProps);
 const emits = defineEmits(switchEmits);
 
 const input = ref<HTMLInputElement>();
+const bulb = ref<HTMLElement | null>(null);
 
 const isControlled = ref(props.modelValue !== false);
 
@@ -71,8 +90,8 @@ const classes = reactive({
 });
 
 (function genClasses() {
-  const { disabled } = props;
-  const switchClass = `${disabled ? 'dg-switch-disabled' : ''}`;
+  const { disabled, dgFun } = props;
+  const switchClass = `${disabled ? 'dg-switch-disabled' : ''} dg-switch-fun-${dgFun}`;
   const sliderClass = 'dg-switch-slider';
   classes.switchClass = switchClass;
   classes.sliderClass = sliderClass;
@@ -98,6 +117,14 @@ watch(() => props.value, (val) => {
 
 watch(isChecked, (val) => {
   input.value!.checked = val;
+  // 如果是true，且dgFun为light，给ref为bulb的元素添加class: light-active
+  if (val && isLight.value) {
+    if (!bulb.value) return;
+    bulb.value!.classList.add('light-active');
+  } else {
+    if (!bulb.value) return;
+    bulb.value!.classList.remove('light-active');
+  }
 });
 
 const handleChange = (e: Event) => {
@@ -108,12 +135,17 @@ const handleChange = (e: Event) => {
   });
 };
 
+// **** dg fun ****
+const isLight = computed(() => {
+  const { dgFun } = props;
+  return dgFun === SwitchDgFun.Light;
+});
+
 onMounted(() => {
   input.value!.checked = isChecked.value;
 });
 
 </script>
 
-<style>
-
+<style lang="less">
 </style>

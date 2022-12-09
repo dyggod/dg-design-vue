@@ -1,6 +1,11 @@
 import type { ExtractPropTypes } from 'vue';
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '#/event';
 
+export enum SwitchDgFun {
+  // 灯
+  Light = 'light',
+}
+
 export const switchProps = {
   modelValue: {
     type: Boolean,

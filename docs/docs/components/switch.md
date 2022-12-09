@@ -105,9 +105,55 @@ const switchValue3 = ref(false);
 
 :::
 
+## dgFun 趣味开关
+
+使用 dgFun 定义趣味开关
+
+### 星灯
+
+is so beautiful，like you，like this...
+
+<div class="example">
+  <light />
+</div>
+
+::: details 查看代码
+
+```vue
+<template>
+  <div>
+    <dg-switch
+      v-model="switchValue"
+      dg-fun="light"
+    />
+  </div>
+</template>
+
+<script setup lang='ts'>
+import { ref } from 'vue';
+
+const switchValue = ref(false);
+</script>
+```
+
+:::
+
+## Switch API
+
+### Switch 属性
+
+| 参数 | 说明 | 类型 | 默认值 |  可选值 |
+| --- | --- | --- | --- | --- |
+| value / v-model | 是否选中 | boolean | false |  |
+| disabled | 是否禁用 | boolean | false | |
+| active-color | 开启时的背景色 | string |  primary色 #1e88e5 | |
+| inactive-color | 关闭时的背景色 | string | gray色   #909399 | |
+| dg-fun | 趣味样式 | string | - | light |
+
 
 <script setup>
 import basic from './switch/basic.vue';
 import disabled from './switch/disabled.vue';
 import color from './switch/color.vue';
+import light from './switch/light.vue';
 </script>

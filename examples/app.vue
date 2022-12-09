@@ -32,7 +32,8 @@
 
     <div style="height: 200px">
       <dg-switch v-model="switchValue" active-color="red" inactive-color="#000"></dg-switch>
-      <dg-switch v-model="switchValue2"></dg-switch>
+      <dg-switch v-model="switchValue2" disabled></dg-switch>
+      <dg-switch v-model="switchValue3" dgFun="light"></dg-switch>
     </div>
   </div>
 </template>
@@ -50,12 +51,7 @@ function clickButton() {
 
 const switchValue = ref(true);
 const switchValue2 = ref(false);
-watch(switchValue2, (val) => {
-  console.log(val);
-});
-watch(switchValue, (val) => {
-  console.log(val);
-});
+const switchValue3 = ref(false);
 </script>
 
 <style lang="less">
