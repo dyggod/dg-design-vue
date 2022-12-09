@@ -7,11 +7,11 @@
 </h1>
 
 <p align="center">
-  <a href="https://www.npmjs.org/package/@dyggod/dg-ui">
-    <img src="https://img.shields.io/npm/v/@dyggod/dg-ui.svg">
+  <a href="https://www.npmjs.org/package/dg-design-vue">
+    <img src="https://img.shields.io/npm/v/dg-design-vue.svg">
   </a>
-  <a href="https://npmcharts.com/compare/@dyggod/dg-ui?minimal=true">
-    <img src="https://img.shields.io/npm/dm/@dyggod/dg-ui.svg">
+  <a href="https://npmcharts.com/compare/dg-design-vue?minimal=true">
+    <img src="https://img.shields.io/npm/dm/dg-design-vue.svg">
   </a>
   <br>
 </p>
@@ -20,36 +20,36 @@
 
 ## 介绍
 
-DG-UI是由个人开发的vue3组件库，你可以在这里看到很多非严肃的、有意思的小组件，它或许不适用于企业级生产，但是你用于个人生产的绝妙宝库。
+DG-UI 是由个人开发的 vue3 组件库，你可以在这里看到很多非严肃的、有意思的小组件，它或许不适用于企业级生产，但是你用于个人生产的绝妙宝库。
 
 [在线文档](https://dyggod.github.io/dg-ui/)
 
 ## 起步
 
 ### 通过包管理器安装
+
 ```
 # 选择一个你喜欢的包管理器
 
 # NPM
-$ npm install @dyggod/dg-ui --save
+$ npm install dg-design-vue --save
 
 # Yarn
-$ yarn add @dyggod/dg-ui
+$ yarn add dg-design-vue
 
 # pnpm
-$ pnpm install @dyggod/dg-ui
+$ pnpm install dg-design-vue --save
 ```
 
-你也可以使用`pnpm`或`yarn`，取决于你的工具。
-
-
 ### 使用
+
+在项目主文件中引入
 
 ```
 // main.ts
 import { createApp } from 'vue'
 import DgUi from '@dyggod/dg-ui'
-import '@dyggod/dg-ui/dg-ui/dist/style.css'
+import '@dyggod/dg-ui/dg-ui/style.css'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -58,8 +58,16 @@ app.use(DgUi)
 app.mount('#app')
 ```
 
+在组件中使用
+
+```
+<template>
+  <div>
+    <dg-button>按钮</dg-button>
+  </div>
+</template>
+```
+
 ## 贡献
 
-本仓库目前由个人开发及维护，但是诚挚欢迎所有热爱开源的程序员参与贡献，十分期待大家的PR。
-
-
+本仓库目前由个人开发及维护，但是诚挚欢迎所有热爱开源的程序员参与贡献，十分期待大家的 PR。

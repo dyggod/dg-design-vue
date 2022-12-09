@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@dyggod/dg-ui": "workspace:^1.0.0"
+    "dg-design-vue": "workspace:^1.0.14"
   }
 }

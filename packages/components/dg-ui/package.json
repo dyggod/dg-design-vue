@@ -1,5 +1,5 @@
 {
-  "name": "@dyggod/dg-ui",
+  "name": "dg-design-vue",
   "version": "1.0.14",
   "description": "",
   "publishConfig": {
@@ -12,6 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
+    "dist",
     "es",
     "lib"
   ],

@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
-import dgui from '@dyggod/dg-ui'
+import dgui from 'dg-design-vue'
 console.log('dgui: ', dgui);
 import App from './app.vue';
-import '@dyggod/dg-ui/dg-ui/dist/style.css';
+import 'dg-design-vue/dist/style.css';
 
 const app = createApp(App);
 

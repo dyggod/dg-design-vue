@@ -1,7 +1,7 @@
 import Theme from 'vitepress/theme'
 import './vitepress.less'
-import dgui from '@dyggod/dg-ui'
-import '@dyggod/dg-ui/dg-ui/dist/style.css'
+import dgui from 'dg-design-vue'
+import 'dg-design-vue/dist/style.css'
 
 export default {
   ...Theme,
