@@ -48,8 +48,8 @@ $ pnpm install dg-design-vue --save
 ```
 // main.ts
 import { createApp } from 'vue'
-import DgUi from '@dyggod/dg-ui'
-import '@dyggod/dg-ui/dg-ui/style.css'
+import DgUi from 'dg-design-vue'
+import 'dg-design-vue/dist/style.css'
 import App from './App.vue'
 
 const app = createApp(App)
