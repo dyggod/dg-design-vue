@@ -34,7 +34,7 @@
 
 :::
 
-### 使用 size 定义按钮大小
+## 使用 size 定义按钮大小
 
 <div class="example">
   <div>

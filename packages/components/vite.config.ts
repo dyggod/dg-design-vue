@@ -50,6 +50,12 @@ export default defineConfig(
         name: 'dg-ui',
       },
     },
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, 'src'),
+        '#': resolve(__dirname, 'constants'),
+      },
+    },
     plugins: [
       vue(),
       DefineOptions(),

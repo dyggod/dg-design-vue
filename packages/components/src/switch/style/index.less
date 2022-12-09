@@ -1,0 +1,72 @@
+@import '../../common/style/common.less';
+
+.@{dg-prefix}-switch {
+  @switch-width: 48px;
+  @switch-height: 24px;
+  @slider-width: 16px;
+  @slider-height: 16px;
+
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1px;
+  margin: #space[xs];
+
+
+  .dg-switch-content {
+    display: inline-block;
+    width: @switch-width;
+    height: @switch-height;
+    position: relative;
+  }
+
+  .dg-switch-content input {
+    display:none;
+  }
+
+  .slider {
+    background-color: var(--inactive-color);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    width: @slider-width;
+    height: @slider-height;
+    content: "";
+    bottom: calc((@switch-height - @slider-height) / 2);
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--active-color);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+
+ // disabled样式
+.@{dg-prefix}-switch-disabled {
+  cursor: not-allowed !important;
+  .slider {
+    cursor: not-allowed !important;
+  }
+  opacity: 0.5;
+}

@@ -17,22 +17,29 @@
       <dg-button type="primary" size="medium" dgFun="run"></dg-button>
       <dg-button type="primary" size="large" dgFun="run"></dg-button>
     </div>
-    <div>
+    <!-- <div>
       <dg-icon name="discount"></dg-icon>
       <dg-icon name="electronics"></dg-icon>
       <dg-icon name="drag"></dg-icon>
-    </div>
+    </div> -->
     <div>
       <dg-button type="primary" dgFun="duang">123456789101112</dg-button>
       <dg-button type="danger" dgFun="duang">Surprise!</dg-button>
     </div>
-    <div style="height: 200px">
+    <div style="height: 400px">
       <dg-magic-card>Magic Card</dg-magic-card>
+    </div>
+
+    <div style="height: 200px">
+      <dg-switch v-model="switchValue" active-color="red" inactive-color="#000"></dg-switch>
+      <dg-switch v-model="switchValue2"></dg-switch>
     </div>
   </div>
 </template>
 
 <script setup lang='ts'>
+import { ref, watch } from 'vue';
+
 const clickJump = () => {
   console.log('jump');
 };
@@ -41,6 +48,14 @@ function clickButton() {
   console.log('click');
 }
 
+const switchValue = ref(true);
+const switchValue2 = ref(false);
+watch(switchValue2, (val) => {
+  console.log(val);
+});
+watch(switchValue, (val) => {
+  console.log(val);
+});
 </script>
 
 <style lang="less">

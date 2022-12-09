@@ -1,5 +1,13 @@
 {
   "extends": "../../tsconfig.json",
+  // 配置路径别名
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "#/*": ["./constants/*"],
+    }
+  },
   "exclude": [
     "../utils"
   ]

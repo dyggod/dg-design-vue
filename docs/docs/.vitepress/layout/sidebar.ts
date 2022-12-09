@@ -26,5 +26,12 @@ export const sidebar = {
         { text: "Magic Card 卡片", link: "/components/mgcard" },
       ],
     },
+    {
+      text: "表单组件",
+      link: "/components/",
+      items: [
+        { text: "Switch 开关", link: "/components/switch" },
+      ]
+    }
   ],
 };
