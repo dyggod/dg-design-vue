@@ -1,4 +1,22 @@
 DG-UI CHANGELOG
+### [1.0.12](https://github.com/dyggod/dg-ui/compare/v1.0.11...v1.0.12) (2022-12-09)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* update main package.json for 1.0.11 ([919de94](https://github.com/dyggod/dg-ui/commit/919de94a6086b19a743f86fb70a3222068d34cd8))
+
+
+### ✏️ Documentation | 文档
+
+* 更新文档库 ([18fb884](https://github.com/dyggod/dg-ui/commit/18fb884e5ab4e3296ebb28d72690bd12c7c28162))
+
+
+### ✨ Features | 新功能
+
+* 添加switch组件及文档 ([b1ed052](https://github.com/dyggod/dg-ui/commit/b1ed0525ffaa0d0cbf6d5b15119e87ee8bbc4d66))
+* 星灯开关 ([d413fe4](https://github.com/dyggod/dg-ui/commit/d413fe4175d8ea160a27185e4a364685193374ad))
+
 ### [1.0.11](https://github.com/dyggod/dg-ui/compare/v1.0.9...v1.0.11) (2022-12-07)
 
 
