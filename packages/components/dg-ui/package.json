@@ -5,11 +5,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dg-ui/lib/index.js",
-  "module": "dg-ui/es/index.mjs",
-  "typings": "dg-ui/lib/index.d.ts",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
@@ -27,6 +26,6 @@
     "url": "https://github.com/dyggod/dg-ui"
   },
   "dependencies": {
-    "@dg-ui/utils": "workspace:^1.0.0"
+    "@dg-ui/utils": "1.0.0"
   }
 }

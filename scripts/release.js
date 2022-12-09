@@ -2,9 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+const componentsPath = path.resolve(__dirname, '../packages/components/dg-ui/package.json');
+
 const mainPackage = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
 const componentsPackageJson = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '../packages/components/package.json'), 'utf8'),
+  fs.readFileSync(componentsPath, 'utf8'),
 );
 const nowVersion = mainPackage.version;
 
@@ -46,7 +48,10 @@ const nextVersion = generateVersion(type);
 
 // 同步至packages/components下的package.json和根目录下的package.json
 componentsPackageJson.version = nextVersion;
-fs.writeFileSync(path.resolve(__dirname, '../packages/components/package.json'), JSON.stringify(componentsPackageJson, null, 2));
+fs.writeFileSync(
+  path.resolve(__dirname, componentsPath),
+  JSON.stringify(componentsPackageJson, null, 2),
+);
 mainPackage.version = nextVersion;
 execSync('git add . ');
 
@@ -58,7 +63,7 @@ console.log('\x1B[32m%s\x1B[0m', '组件库构建完成');
 console.log('\x1b[33m%s\x1b[0m', '开始发布组件库...');
 execSync(
   'npm publish',
-  { cwd: path.resolve(__dirname, '../packages/components'), stdio: 'inherit' },
+  { cwd: path.resolve(__dirname, '../packages/components/dg-ui'), stdio: 'inherit' },
 );
 console.log('\x1B[32m%s\x1B[0m', '组件库发布完成');
 
