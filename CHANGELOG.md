@@ -1,4 +1,16 @@
 DG-UI CHANGELOG
+### [1.0.16](https://github.com/dyggod/dg-ui/compare/v1.0.15...v1.0.16) (2022-12-09)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* update main package.json for 1.0.15 ([b29949b](https://github.com/dyggod/dg-ui/commit/b29949b238013d6b2d50ff01a28c457be11a7abe))
+
+
+### ✏️ Documentation | 文档
+
+* fix ([ce0c82d](https://github.com/dyggod/dg-ui/commit/ce0c82defe33cd496623adb6388964d1b93e31b3))
+
 ### [1.0.15](https://github.com/dyggod/dg-ui/compare/v1.0.14...v1.0.15) (2022-12-09)
 
 
