@@ -6,7 +6,7 @@
       <dg-button type="primary" dgFun="run"></dg-button>
       <dg-button type="warning"></dg-button>
       <dg-button type="info"></dg-button>
-      <dg-button type="primary" dgFun="jump" @click="clickJump"></dg-button>
+      <!-- <dg-button type="primary" dgFun="jump" @click="clickJump"></dg-button> -->
       <dg-button dgFun="hub"></dg-button>
       <dg-button dgFun="hub" type="primary"></dg-button>
       <dg-button dgFun="hub" type="danger"></dg-button>
@@ -17,16 +17,21 @@
       <dg-button type="primary" size="medium" dgFun="run"></dg-button>
       <dg-button type="primary" size="large" dgFun="run"></dg-button>
     </div>
-    <!-- <div>
+    <div>
       <dg-icon name="discount"></dg-icon>
       <dg-icon name="electronics"></dg-icon>
       <dg-icon name="drag"></dg-icon>
-    </div> -->
+    </div>
     <div>
       <dg-button type="primary" dgFun="duang">123456789101112</dg-button>
       <dg-button type="danger" dgFun="duang">Surprise!</dg-button>
     </div>
-    <div style="height: 400px">
+    <div>
+      <dg-button type="primary" dgFun="christmas">Christmas Button</dg-button>
+      <dg-button type="primary" dgFun="christmas">dg-ui</dg-button>
+      <dg-button type="danger" dgFun="christmas">dg-ui</dg-button>
+    </div>
+    <div style="height: 400px;margin-top:10px;">
       <dg-magic-card>Magic Card</dg-magic-card>
     </div>
 

@@ -14,7 +14,7 @@
 
 ```vue
 <template>
-  <div>
+  <div style="height: 400px;background:#212534;display:flex;justify-content: center;align-items:center">
     <dg-magic-card>
       Magic Card
     </dg-magic-card>
