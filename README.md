@@ -46,7 +46,7 @@ $ pnpm install dg-design-vue --save
 在项目主文件中引入
 
 ```
-// main.ts
+// main.ts or main.js
 import { createApp } from 'vue'
 import DgUi from 'dg-design-vue'
 import 'dg-design-vue/dist/style.css'

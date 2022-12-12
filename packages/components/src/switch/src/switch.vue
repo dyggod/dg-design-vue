@@ -130,6 +130,7 @@ watch(isChecked, (val) => {
 const handleChange = (e: Event) => {
   const val = !isChecked.value;
   emits(UPDATE_MODEL_EVENT, val);
+  emits(CHANGE_EVENT, val);
   nextTick(() => {
     input.value!.checked = isChecked.value;
   });

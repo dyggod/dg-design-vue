@@ -59,6 +59,18 @@ console.log('\x1b[33m%s\x1b[0m', '开始构建组件库...');
 execSync('npm run build', { cwd: path.resolve(__dirname, '../packages/components'), stdio: 'inherit' });
 console.log('\x1B[32m%s\x1B[0m', '组件库构建完成');
 
+// 同步根目录下的README.md到packages/components和packages/components/dg-ui下
+console.log('\x1b[33m%s\x1b[0m', '开始同步README.md...');
+fs.copyFileSync(
+  path.resolve(__dirname, '../README.md'),
+  path.resolve(__dirname, '../packages/components/README.md'),
+);
+fs.copyFileSync(
+  path.resolve(__dirname, '../README.md'),
+  path.resolve(__dirname, '../packages/components/dg-ui/README.md'),
+);
+console.log('\x1B[32m%s\x1B[0m', 'README.md同步完成');
+
 // 发布npm包
 console.log('\x1b[33m%s\x1b[0m', '开始发布组件库...');
 execSync(

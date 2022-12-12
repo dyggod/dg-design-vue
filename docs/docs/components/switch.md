@@ -150,6 +150,12 @@ const switchValue = ref(false);
 | inactive-color | 关闭时的背景色 | string | gray色   #909399 | |
 | dg-fun | 趣味样式 | string | - | light |
 
+### Switch 事件
+
+| 事件名称 | 说明 | 回调参数 |
+| --- | --- | --- |
+| change | 开关状态改变时触发 | value，新状态的值 |
+
 
 <script setup>
 import basic from './switch/basic.vue';

@@ -74,7 +74,7 @@
 
 使用 dgFun 定义趣味按钮
 
-### 跑动的小人儿~
+### 跑动的小人儿
 
 <br>
 
@@ -108,7 +108,7 @@
 
 :::
 
-### 跳跃的按钮~（你逮不到我）
+### 跳跃的按钮（你逮不到我）
 
 当你点到按钮时，它就乖乖不动了
 
@@ -166,7 +166,7 @@
 
 :::
 
-### 是你熟悉的 hub 吗～
+### 是你熟悉的 hub 吗？
 
 请小心使用它
 
@@ -192,6 +192,28 @@
 
 :::
 
+### Merry Christmas，my dear~
+
+<div class="example">
+  <div>
+    <dg-button dgFun="christmas" type="primary">dg-ui</dg-button>
+    <dg-button dgFun="christmas" type="danger">Christmas Button</dg-button>
+  </div>
+</div>
+
+::: details 显示代码
+
+```vue
+<template>
+  <div>
+    <dg-button dgFun="christmas" type="primary">dg-ui</dg-button>
+    <dg-button dgFun="christmas" type="danger">Christmas Button</dg-button>
+  </div>
+</template>
+```
+
+:::
+
 ## Button API
 
 ### Button 属性
@@ -200,4 +222,4 @@
 | ----- | ------------ | -------- | ------------------------------------------- | ------ |
 | type  | 按钮类型     | _string_ | primary / success / warning / danger / info | -      |
 | size  | 按钮大小     | _string_ | large / small / medium                        | -      |
-| dgFun | 按钮趣味样式 | _string_ | run / jump / duang / hub                    | -      |
+| dgFun | 按钮趣味样式 | _string_ | run / jump / duang / hub / christmas                    | -      |
