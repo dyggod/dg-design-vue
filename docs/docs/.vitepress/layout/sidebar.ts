@@ -32,6 +32,14 @@ export const sidebar = {
       items: [
         { text: "Switch 开关", link: "/components/switch" },
       ]
+    },
+    {
+      text: "反馈组件",
+      link: "/components/",
+      items: [
+        { text: "Tooltip 文字提示", link: "/components/tooltip" },
+      ]
     }
+
   ],
 };
