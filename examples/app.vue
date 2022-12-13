@@ -40,6 +40,13 @@
       <dg-switch v-model="switchValue2" disabled></dg-switch>
       <dg-switch v-model="switchValue3" dgFun="light"></dg-switch>
     </div>
+
+    <div style="width:500px;display:flex;justify-content:center">
+      <dg-tooltip content="my tooltip" placement="left"><dg-button type="primary">priamrypriamrypriamrypriamry</dg-button></dg-tooltip>
+      <dg-tooltip content="my tooltip" placement="right"><dg-button type="primary">priamry</dg-button></dg-tooltip>
+      <dg-tooltip content="my tooltip" placement="top"><dg-button type="primary">top</dg-button></dg-tooltip>
+      <dg-tooltip content="my tooltip" placement="bottom"><dg-button type="primary">bottom</dg-button></dg-tooltip>
+    </div>
   </div>
 </template>
 

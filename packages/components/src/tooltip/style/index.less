@@ -1,0 +1,132 @@
+@import '../../common/style/common.less';
+
+.@{dg-prefix}-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-popper {
+  position: absolute;
+  text-transform: none;
+  font-size: .9em;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+
+  text-align: center;
+  background: #colors[text-primary];
+  font-family: Helvetica, sans-serif;
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: .3ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  color: #fff;
+  z-index: 1000;
+
+  &-arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: -1;
+    transform: translate(36px, 0px);
+  }
+
+  &-arrow::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: -1;
+    content: " ";
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    background-color: #colors[text-primary];
+  }
+}
+
+
+// 上
+.tooltip-popper-top {
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translate(-50%, -.5em);
+
+  .tooltip-popper-arrow {
+    bottom: -5px;
+    left: 0;
+  }
+}
+
+// 下
+.tooltip-popper-bottom {
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translate(-50%, .5em);
+
+  .tooltip-popper-arrow {
+    top: -5px;
+    left: 0px;
+  }
+}
+
+// 左
+.tooltip-popper-left {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-.5em, -50%);
+
+  .tooltip-popper-arrow {
+    right: 36px;
+    top: 10px;
+  }
+}
+
+// 右
+.tooltip-popper-right {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+
+  .tooltip-popper-arrow {
+    left: -46px;
+    top: 10px;
+  }
+}
+
+
+.tooltip-left-enter-active, .tooltip-right-enter-active {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
+
+.tooltip-top-enter-active, .tooltip-bottom-enter-active {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+.tooltip-leave-active {
+  animation: tooltips-hide 300ms ease-out forwards;
+}
+
+// keyframes
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-hide {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
