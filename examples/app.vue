@@ -65,17 +65,20 @@
         placement="bottom"
         v-model="tooltipValue"
       >
-        <dg-button
-          type="primary"
-          >bottom</dg-button
-        ></dg-tooltip
+        <dg-button type="primary">bottom</dg-button></dg-tooltip
       >
-      <dg-button  @mouseenter="tooltipValue = true"
-          @mouseleave="tooltipValue = false">test</dg-button>
+      <dg-button
+        @mouseenter="tooltipValue = true"
+        @mouseleave="tooltipValue = false"
+        >test</dg-button
+      >
     </div>
     <div style="width: 500px; display: flex; justify-content: center">
       <dg-tooltip content="my tooltip" placement="left" trigger="click"
         ><dg-button type="primary">priamry</dg-button></dg-tooltip
+      >
+      <dg-tooltip content="my tooltip" placement="left" trigger="click" :visible="true"
+        ><dg-button type="primary">priamry1</dg-button></dg-tooltip
       >
       <dg-tooltip content="my tooltip" placement="left" trigger="contextmenu"
         ><dg-button type="primary">priamry</dg-button></dg-tooltip

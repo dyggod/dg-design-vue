@@ -49,10 +49,28 @@ const props = defineProps(tooltipProps);
 const tooltipTriggerDiv = ref<HTMLElement>();
 const tooltipPopper = ref<HTMLElement>();
 
-const isControlled = ref(props.modelValue !== false && props.modelValue !== undefined);
+const isControlled = ref(
+  props.modelValue !== false
+  && props.modelValue !== undefined,
+);
+
+// 给isControlled赋值时要经过拦截器，拦截器中判断disabled是否为true
+const isControlledInterceptor = {
+  set(value: boolean) {
+    if (props.disabled === true) {
+      return true;
+    }
+    isControlled.value = value;
+    return true;
+  },
+};
 
 const visible = computed(() => {
+  // 如果disabled为true，就不是受控组件
   // 如果visible和modelValue属性不是undefined，就不是受控组件
+  if (props.disabled === true) {
+    return false;
+  }
   if (props.visible !== undefined) {
     return props.visible;
   }
@@ -84,28 +102,28 @@ watch(() => props.visible, (val) => {
 
 // 设置不同的事件：mouseenter, mouseleave, click, focus, blur, contextmenu
 const handleMouseEnter = () => {
-  isControlled.value = true;
+  isControlledInterceptor.set(true);
 };
 const handleMouseLeave = () => {
   setTimeout(() => {
-    isControlled.value = false;
+    isControlledInterceptor.set(false);
   }, props.hideAfter);
 };
 const handleClick = () => {
-  isControlled.value = !isControlled.value;
+  isControlledInterceptor.set(!isControlled.value);
 };
 const handleFocus = () => {
-  isControlled.value = true;
+  isControlledInterceptor.set(true);
 };
 const handleBlur = () => {
   setTimeout(() => {
-    isControlled.value = false;
+    isControlledInterceptor.set(false);
   }, props.hideAfter);
 };
 const handleContextMenu = (event: Event) => {
   // 阻止浏览器默认的右键菜单
   event.preventDefault();
-  isControlled.value = !isControlled.value;
+  isControlledInterceptor.set(!isControlled.value);
 };
 // 鼠标点击任何地方，tooltip消失
 const handleDocumentClick = (event: MouseEvent) => {
@@ -117,7 +135,9 @@ const handleDocumentClick = (event: MouseEvent) => {
     if (tooltipPopper.value?.contains(target)) {
       return;
     }
-    isControlled.value = false;
+    setTimeout(() => {
+      isControlledInterceptor.set(false);
+    }, props.hideAfter);
   }
 };
 
