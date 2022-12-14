@@ -4,6 +4,7 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
+  margin: #space[xs];
 }
 
 .tooltip-popper {
@@ -106,7 +107,10 @@
   animation: tooltips-vert 300ms ease-out forwards;
 }
 
-.tooltip-leave-active {
+.tooltip-left-leave-active,
+.tooltip-right-leave-active,
+.tooltip-top-leave-active,
+.tooltip-bottom-leave-active {
   animation: tooltips-hide 300ms ease-out forwards;
 }
 

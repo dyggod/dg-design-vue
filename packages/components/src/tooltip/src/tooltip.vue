@@ -1,16 +1,19 @@
 <template>
   <div
-    ref="tooltipContainer"
     class="dg-tooltip"
   >
-    <div class="dg-tooltip-trigger">
+    <div
+      ref="tooltipTriggerDiv"
+      class="dg-tooltip-trigger"
+      tabindex="0"
+    >
       <slot v-if="$slots.default" />
     </div>
     <transition
       :name="transitionName"
     >
       <div
-        v-if="showTooltip"
+        v-if="visible"
         ref="tooltipPopper"
         class="tooltip-popper"
         :class="placementClass"
@@ -30,7 +33,7 @@
 
 <script lang="ts">
 import {
-  defineComponent, useSlots, reactive, ref, watch, computed, onMounted, nextTick,
+  useSlots, reactive, ref, watch, computed, onMounted, nextTick,
 } from 'vue';
 import { tooltipProps, TooltipTrigger, tooltipEmits } from './tooltip';
 import '../style/index.less';
@@ -43,20 +46,21 @@ export default {
 <script setup lang='ts'>
 // 写一个tooltip组件，使用vue3的setup语法
 const props = defineProps(tooltipProps);
-const tooltipContainer = ref<HTMLElement>();
+const tooltipTriggerDiv = ref<HTMLElement>();
 const tooltipPopper = ref<HTMLElement>();
-const showTooltip = ref(false);
-// 1. 首先定义tooltip的可见性，由visible控制，visible的值取决于prop.modelValue和prop.visible共同控制
-const isControlled = computed(() => props.modelValue !== false);
+
+const isControlled = ref(props.modelValue !== false && props.modelValue !== undefined);
 
 const visible = computed(() => {
-  if (isControlled.value) {
-    return props.modelValue === true;
+  // 如果visible和modelValue属性不是undefined，就不是受控组件
+  if (props.visible !== undefined) {
+    return props.visible;
   }
-  return props.visible === true;
+  if (props.modelValue !== undefined) {
+    return props.modelValue;
+  }
+  return isControlled.value ? isControlled.value : props.visible === true;
 });
-
-showTooltip.value = visible.value;
 
 const slots = useSlots();
 const hasSlot = computed(() => !!slots.default);
@@ -69,20 +73,66 @@ const placement = computed(() => {
 const transitionName = computed(() => `tooltip-${placement.value}`);
 const placementClass = computed(() => `tooltip-popper-${placement.value}`);
 
-// 对ref=tooltipContainer的元素添加鼠标移入移出事件
+// 监听modelValue的变化和visible的变化，来控制tooltip的显示和隐藏
+watch(() => props.modelValue, (val) => {
+  isControlled.value = val === true;
+});
+
+watch(() => props.visible, (val) => {
+  isControlled.value = val === true;
+});
+
+// 设置不同的事件：mouseenter, mouseleave, click, focus, blur, contextmenu
 const handleMouseEnter = () => {
-  showTooltip.value = true;
+  isControlled.value = true;
 };
 const handleMouseLeave = () => {
   setTimeout(() => {
-    showTooltip.value = false;
+    isControlled.value = false;
   }, props.hideAfter);
 };
-onMounted(() => {
-  if (tooltipContainer.value) {
-    tooltipContainer.value.addEventListener('mouseenter', handleMouseEnter);
-    tooltipContainer.value.addEventListener('mouseleave', handleMouseLeave);
+const handleClick = () => {
+  isControlled.value = !isControlled.value;
+};
+const handleFocus = () => {
+  isControlled.value = true;
+};
+const handleBlur = () => {
+  setTimeout(() => {
+    isControlled.value = false;
+  }, props.hideAfter);
+};
+const handleContextMenu = (event: Event) => {
+  // 阻止浏览器默认的右键菜单
+  event.preventDefault();
+  isControlled.value = !isControlled.value;
+};
+// 鼠标点击任何地方，tooltip消失
+const handleDocumentClick = (event: MouseEvent) => {
+  const { target } = event;
+  if (target instanceof Node) {
+    if (tooltipTriggerDiv.value?.contains(target)) {
+      return;
+    }
+    if (tooltipPopper.value?.contains(target)) {
+      return;
+    }
+    isControlled.value = false;
   }
+};
+
+// onMounted时，根据trigger的不同，绑定不同的事件
+onMounted(() => {
+  const { trigger } = props;
+  if (trigger === TooltipTrigger.Hover) {
+    tooltipTriggerDiv.value?.addEventListener('mouseenter', handleMouseEnter);
+    tooltipTriggerDiv.value?.addEventListener('mouseleave', handleMouseLeave);
+  } else if (trigger === TooltipTrigger.Click) {
+    tooltipTriggerDiv.value?.addEventListener('click', handleClick);
+  } else if (trigger === TooltipTrigger.Contextmenu) {
+    tooltipTriggerDiv.value?.addEventListener('contextmenu', handleContextMenu);
+  }
+  document.addEventListener('click', handleDocumentClick);
 });
 </script>
 

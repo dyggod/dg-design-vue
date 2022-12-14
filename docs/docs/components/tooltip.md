@@ -74,11 +74,55 @@
 
 :::
 
+## 触发方式
+
+通过 `trigger` 属性设置触发方式，可选值为 `hover`、`click`、`contextmenu`， 默认为 `hover`。
+
+当不为 `hover` 时，触发后可点击任何地方关闭提示框。
+
+<div class="example">
+  <div style="width:400px;display:flex;justify-content:space-between">
+    <dg-tooltip content="提示文字" trigger="hover">
+      <dg-button type="primary">鼠标移入</dg-button>
+    </dg-tooltip>
+    <dg-tooltip content="提示文字" trigger="click">
+      <dg-button type="danger">鼠标点击</dg-button>
+    </dg-tooltip>
+    <dg-tooltip content="提示文字" trigger="contextmenu">
+      <dg-button>鼠标右键</dg-button>
+    </dg-tooltip>
+  </div>
+</div>
+
+::: details 显示代码
+
+```vue
+<template>
+  <div>
+    <div style="width:400px;display:flex;justify-content:space-between">
+      <dg-tooltip content="提示文字" trigger="hover">
+        <dg-button type="primary">鼠标移入</dg-button>
+      </dg-tooltip>
+      <dg-tooltip content="提示文字" trigger="click">
+        <dg-button type="danger">鼠标点击</dg-button>
+      </dg-tooltip>
+      <dg-tooltip content="提示文字" trigger="contextmenu">
+        <dg-button>鼠标右键</dg-button>
+      </dg-tooltip>
+    </div>
+  </div>
+</template>
+```
+
+:::
+
 ## API
 
 ### Tooltip 属性
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| content | 提示框的内容 | string | - |
-| placement | 提示框的显示位置 | string | top |
+| 参数 | 说明 | 类型 | 默认值 | 可选值 |
+| --- | --- | --- | --- | --- |
+| v-model/:visible | 是否显示提示框 | boolean | false | true, false |
+| content | 提示框的内容 | string | - | - |
+| placement | 提示框的显示位置 | string | top | top, right, bottom, left |
+| trigger | 触发方式 | string | hover | hover, click, contextmenu |

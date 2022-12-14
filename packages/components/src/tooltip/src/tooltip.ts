@@ -11,18 +11,17 @@ export enum TooltipPlacement {
 export enum TooltipTrigger {
   Click = 'click',
   Hover = 'hover',
-  Focus = 'focus',
   Contextmenu = 'contextmenu',
 }
 
 export const tooltipProps = {
   modelValue: {
-    type: Boolean,
-    default: false,
+    type: Boolean || undefined,
+    default: undefined,
   },
   visible: {
-    type: Boolean,
-    default: false,
+    type: Boolean || undefined,
+    default: undefined,
   },
   content: {
     type: String,
