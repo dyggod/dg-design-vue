@@ -1,4 +1,21 @@
 DG-UI CHANGELOG
+## [1.1.0](https://github.com/dyggod/dg-ui/compare/v1.0.20...v1.1.0) (2022-12-15)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* update main package.json for 1.0.20 ([82d6a87](https://github.com/dyggod/dg-ui/commit/82d6a87b2ffcb0f064885928e25999986e3387ca))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* tooltip的显隐使用拦截器判断是否disabled ([f8e848c](https://github.com/dyggod/dg-ui/commit/f8e848cb43d8178bf9e0d8efb05ffeafd66ca603))
+
+
+### ✏️ Documentation | 文档
+
+* 更新readme和tooltip说明 ([1fb570c](https://github.com/dyggod/dg-ui/commit/1fb570c2e4cc77dc08c7c9e2bb3102e1a0f965a7))
+
 ### [1.0.20](https://github.com/dyggod/dg-ui/compare/v1.0.19...v1.0.20) (2022-12-14)
 
 
