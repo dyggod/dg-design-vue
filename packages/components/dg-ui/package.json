@@ -17,14 +17,15 @@
     "lib"
   ],
   "keywords": [
-    "dg-ui",
-    "vue3组件库"
+    "dg-design-vue",
+    "vue3组件库",
+    "dg-ui"
   ],
   "author": "dyggod",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dyggod/dg-ui"
+    "url": "https://github.com/dyggod/dg-design-vue"
   },
   "dependencies": {
     "@dg-ui/utils": "1.0.0"

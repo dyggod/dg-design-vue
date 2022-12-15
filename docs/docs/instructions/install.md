@@ -4,10 +4,10 @@
 # 选择一个你喜欢的包管理器
 
 # NPM
-$ npm install @dyggod/dg-ui --save
+$ npm install dg-design-vue --save
 
 # Yarn
-$ yarn add @dyggod/dg-ui
+$ yarn add dg-design-vue
 
 # pnpm
-$ pnpm install @dyggod/dg-ui
+$ pnpm install dg-design-vue

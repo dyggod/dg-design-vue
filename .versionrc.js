@@ -1,5 +1,5 @@
 module.exports = {
-  header: 'DG-UI CHANGELOG',
+  header: 'DG-Design-Vue CHANGELOG',
   types: [
     { type: 'feat', section: '✨ Features | 新功能' },
     { type: 'fix', section: '🐛 Bug Fixes | Bug 修复' },

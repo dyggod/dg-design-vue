@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dyggod/dg-ui.git"
+    "url": "git+https://github.com/dyggod/dg-design-vue.git"
   },
   "keywords": [
     "vue3",
@@ -24,9 +24,9 @@
   "author": "dyggod",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dyggod/dg-ui/issues"
+    "url": "https://github.com/dyggod/dg-design-vue/issues"
   },
-  "homepage": "https://github.com/dyggod/dg-ui#readme",
+  "homepage": "https://github.com/dyggod/dg-design-vue#readme",
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",

@@ -26,7 +26,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/dyggod/dg-ui.git'
+        link: 'https://github.com/dyggod/dg-design-vue.git'
       }
     ],
     footer: {
