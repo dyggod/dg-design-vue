@@ -1,4 +1,16 @@
-DG-UI CHANGELOG
+DG-Design-Vue CHANGELOG
+### [1.1.1](https://github.com/dyggod/dg-design-vue/compare/v1.1.0...v1.1.1) (2022-12-15)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* update main package.json for 1.1.0 ([3521f07](https://github.com/dyggod/dg-design-vue/commit/3521f0796d696ba276fd599043ca3ace76726a6e))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* rename ([eb1057d](https://github.com/dyggod/dg-design-vue/commit/eb1057d348f275d2068a0071cae2660e2d8086e5))
+
 ## [1.1.0](https://github.com/dyggod/dg-ui/compare/v1.0.20...v1.1.0) (2022-12-15)
 
 
