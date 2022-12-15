@@ -74,6 +74,34 @@
 
 :::
 
+## 禁用状态
+
+通过 `disabled` 属性设置禁用状态。当是禁用状态时，不会触发提示框，即便设置 `:visible="true"` 也不会显示。
+
+<div class="example">
+  <div>
+    <dg-tooltip content="提示文字" disabled>
+      <dg-button type="primary">禁用状态</dg-button>
+    </dg-tooltip>
+  </div>
+</div>
+
+::: details 显示代码
+
+```vue
+<template>
+  <div>
+    <div>
+      <dg-tooltip content="提示文字" disabled>
+        <dg-button type="primary">禁用状态</dg-button>
+      </dg-tooltip>
+    </div>
+  </div>
+</template>
+```
+
+:::
+
 ## 触发方式
 
 通过 `trigger` 属性设置触发方式，可选值为 `hover`、`click`、`contextmenu`， 默认为 `hover`。
