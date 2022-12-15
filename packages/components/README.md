@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  <a href="https://dyggod.github.io/dg-ui/" target="_blank">DG-Design-Vue</a>
+  <a href="https://dyggod.github.io/dg-design-vue/" target="_blank">DG-Design-Vue</a>
 </h1>
 
 <p align="center">
@@ -30,7 +30,7 @@
 DG-UI 是由个人开发的 vue3 组件库，不同于其他组件库是为了帮助开发者实现企业级生产，比如做一个后台管理系统。DG-UI 同样会提供一些常用的基础组件，但更多的是提供一些古灵精怪的想法和思路以及作者收集来的一些有意思的效果，所以你可以在这里看到很多非严肃的、趣味的小组件，它或许不适用于企业级生产，但会是你用于个人生产的绝妙宝库。
 
 ## 文档 👇
-[在线文档](https://dyggod.github.io/dg-ui/)
+[在线文档](https://dyggod.github.io/dg-design-vue/)
 
 ## 起步 🚀
 
