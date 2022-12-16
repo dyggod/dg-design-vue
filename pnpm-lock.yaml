@@ -77,7 +77,7 @@ importers:
 
   packages/components/dg-ui:
     specifiers:
-      '@dg-ui/utils': 1.0.0
+      '@dg-ui/utils': ^1.0.0
     dependencies:
       '@dg-ui/utils': link:../../utils
 
