@@ -81,3 +81,7 @@ app.mount('#app')
 ## 贡献
 
 本仓库目前由个人开发及维护，但是诚挚欢迎所有热爱开源的程序员参与贡献，十分期待大家的 PR。
+
+## License
+
+Dg-Design-Vue is open source and released under the [MIT](https://github.com/dyggod/dg-design-vue/LICENSE) License.
