@@ -84,4 +84,4 @@ app.mount('#app')
 
 ## License
 
-Dg-Design-Vue is open source and released under the [MIT](https://github.com/dyggod/dg-design-vue/LICENSE) License.
+Dg-Design-Vue is open source and released under the [MIT](https://github.com/dyggod/dg-design-vue/blob/main/LICENSE) License.
