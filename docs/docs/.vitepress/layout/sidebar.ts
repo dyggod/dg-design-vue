@@ -34,6 +34,13 @@ export const sidebar = {
       ]
     },
     {
+      text: "数据展示",
+      link: "/components/",
+      items: [
+        { text: "Badge 徽标", link: "/components/badge" },
+      ]
+    },
+    {
       text: "反馈组件",
       link: "/components/",
       items: [

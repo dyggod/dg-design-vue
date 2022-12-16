@@ -54,6 +54,7 @@ export default defineConfig(
       alias: {
         '@': resolve(__dirname, 'src'),
         '#': resolve(__dirname, 'constants'),
+        '&': resolve(__dirname, 'hooks'),
       },
     },
     plugins: [

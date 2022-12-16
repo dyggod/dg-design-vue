@@ -28,6 +28,6 @@
     "url": "https://github.com/dyggod/dg-design-vue"
   },
   "dependencies": {
-    "@dg-ui/utils": "1.0.0"
+    "@dg-ui/utils": "^1.0.0"
   }
 }
