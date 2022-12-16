@@ -1,5 +1,7 @@
 <template>
-  <div>
+  tab1<dg-switch v-model="tab1">tab1</dg-switch>
+  tab2<dg-switch v-model="tab2">tab2</dg-switch>
+  <div v-if="tab1">
     <div>
       <dg-button></dg-button>
       <dg-button @click="clickButton" type="danger" dgFun="run">123</dg-button>
@@ -85,10 +87,29 @@
       >
     </div>
   </div>
+  <div v-if="tab2">
+    <div style="display:flex;flex-direction:column">
+      <dg-badge :value="25">
+        <dg-button>badge</dg-button>
+      </dg-badge>
+      <dg-badge :value="25" :max="10">
+        <dg-button>badge</dg-button>
+      </dg-badge>
+      <dg-badge :value="25" isDot>
+        <dg-button>badge</dg-button>
+      </dg-badge>
+      <dg-badge value="new">
+        <dg-button>badge</dg-button>
+      </dg-badge>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
+
+const tab1 = ref(true);
+const tab2 = ref(false);
 
 const clickJump = () => {
   console.log("jump");

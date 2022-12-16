@@ -1,0 +1,61 @@
+@import '../../common/style/common.less';
+
+@badge-base-size: 18px;
+@badge-radius: 10px;
+
+.@{dg-prefix}-badge {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  width: fit-content;
+  margin: #space[xxs];
+
+  &-content {
+    position: absolute;
+    height: @badge-base-size;
+    top: 0;
+    right: calc(1px + @badge-base-size / 2);
+    display: inline-flex;
+    align-items: center;
+    padding: 0 #space[xs];
+    text-align: center;
+    justify-content: center;
+    font-size: #font-size[xs];
+    white-space: nowrap;
+    border-radius: @badge-radius;
+    border: 1px solid #colors[white];
+    background-color: #colors[danger];
+    color: #colors[white];
+    transform: translateY(-50%) translate(100%);
+
+    &-danger {
+      background-color: #colors[danger];
+    }
+
+    &-warning {
+      background-color: #colors[warning];
+    }
+
+    &-success {
+      background-color: #colors[success];
+    }
+
+    &-info {
+      background-color: #colors[info];
+    }
+
+    &-primary {
+      background-color: #colors[primary];
+    }
+
+    &-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border-radius: 50%;
+      right: 8px;
+    }
+  }
+
+}
