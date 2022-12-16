@@ -48,14 +48,12 @@ importers:
 
   docs:
     specifiers:
-      '@dyggod/dg-ui': workspace:^1.0.1
       dg-design-vue: workspace:^1.0.14
       highlight.js: ^11.7.0
       markdown-it: ^13.0.1
       markdown-it-container: ^3.0.0
       vitepress: ^1.0.0-alpha.29
     dependencies:
-      '@dyggod/dg-ui': link:../packages/components
       dg-design-vue: link:../packages/components/dg-ui
     devDependencies:
       highlight.js: 11.7.0
