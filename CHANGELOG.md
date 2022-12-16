@@ -1,4 +1,23 @@
 DG-Design-Vue CHANGELOG
+### [1.1.3](https://github.com/dyggod/dg-design-vue/compare/v1.1.2...v1.1.3) (2022-12-16)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* update main package.json for 1.1.2 ([77fc8a9](https://github.com/dyggod/dg-design-vue/commit/77fc8a9ecbffff7ce42d8c2a7e8430369a7becc6))
+
+
+### ✨ Features | 新功能
+
+* 添加badge组件及示例和文档 ([74fa837](https://github.com/dyggod/dg-design-vue/commit/74fa837d3708887803c826fbebbf0e0873f6823b))
+* utils更新 ([f09f468](https://github.com/dyggod/dg-design-vue/commit/f09f468f19e1a1a26f45828a0d50a026d3d3fc6f))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复@dyggod/utils版本依赖 ([72f53f6](https://github.com/dyggod/dg-design-vue/commit/72f53f6282bbaac816f58f05651095026d6ce669))
+* docs public ([69b4ddb](https://github.com/dyggod/dg-design-vue/commit/69b4ddb13080f1bf6ce148bf1ba5b78ea5daa01b))
+
 ### [1.1.2](https://github.com/dyggod/dg-design-vue/compare/v1.1.1...v1.1.2) (2022-12-15)
 
 
