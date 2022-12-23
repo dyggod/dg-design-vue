@@ -102,14 +102,20 @@
         <dg-button>badge</dg-button>
       </dg-badge>
     </div>
+
+    <div>
+      <dg-rate :max="6" v-model="rateValue1" 
+        @change="rateChange"  
+      ></dg-rate>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
 
-const tab1 = ref(true);
-const tab2 = ref(false);
+const tab1 = ref(false);
+const tab2 = ref(true);
 
 const clickJump = () => {
   console.log("jump");
@@ -123,6 +129,12 @@ const switchValue = ref(true);
 const switchValue2 = ref(false);
 const switchValue3 = ref(false);
 const tooltipValue = ref(true);
+
+const rateValue1 = ref(2);
+
+const rateChange = (value: number) => {
+  console.log('value: ', value);
+};
 </script>
 
 <style lang="less">
