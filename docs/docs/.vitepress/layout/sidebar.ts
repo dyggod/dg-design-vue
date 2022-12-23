@@ -31,6 +31,7 @@ export const sidebar = {
       link: "/components/",
       items: [
         { text: "Switch 开关", link: "/components/switch" },
+        { text: "Rate 评分", link: "/components/rate" },
       ]
     },
     {

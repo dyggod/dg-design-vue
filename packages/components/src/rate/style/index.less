@@ -1,0 +1,26 @@
+@import '@/common/style/common.less';
+
+.@{dg-prefix}-rate {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+
+  &-item {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+    vertical-align: middle;
+    line-height: normal;
+
+    i {
+      margin-right: #space[xxs];
+      font-size: 18px;
+    }
+  }
+
+  &-text {
+    font-size: 14px;
+    vertical-align: middle;
+  }
+}

@@ -1,6 +1,6 @@
 const componentPrefix = 'dg';
 
-type ComponentName = 'button' | 'badge';
+type ComponentName = 'button' | 'badge' | 'rate';
 
 type ComponentClassSpace = {
   [key in ComponentName]: (props: any) => void;
@@ -12,6 +12,14 @@ export function useClassSpace(componentName: ComponentName, options?: any) {
 
   function button() {
     return '';
+  }
+
+  function rate() {
+    return {
+      rate: `${componentClass}`,
+      rateItem: `${componentClassPrefix}item`,
+      text: `${componentClassPrefix}text`,
+    };
   }
 
   function badge(badgeProps: any) {
@@ -27,6 +35,7 @@ export function useClassSpace(componentName: ComponentName, options?: any) {
   const componentClassSpace: ComponentClassSpace = {
     button,
     badge,
+    rate,
   };
 
   return componentClassSpace[componentName](options);

@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 3800415 */
-  src: url('//at.alicdn.com/t/c/font_3800415_p2krvmfpfk.woff2?t=1669786393639') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3800415_p2krvmfpfk.woff?t=1669786393639') format('woff'),
-       url('//at.alicdn.com/t/c/font_3800415_p2krvmfpfk.ttf?t=1669786393639') format('truetype');
+  font-family: 'iconfont';  /* Project id 3800415 */
+  src: url('//at.alicdn.com/t/c/font_3800415_4y4po36drog.woff2?t=1671179452430') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3800415_4y4po36drog.woff?t=1671179452430') format('woff'),
+       url('//at.alicdn.com/t/c/font_3800415_4y4po36drog.ttf?t=1671179452430') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,19 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.dg-icon-star:before {
+  content: "\e7df";
+}
+
+.dg-icon-star-fill:before {
+  content: "\e86a";
+}
+
+.dg-icon-star-active:before {
+  content: "\e86a";
+  color: #f5a623;
 }
 
 .dg-icon-a-line_order-editor:before {
@@ -24,3 +37,4 @@
 .dg-icon-line_right:before {
   content: "\e629";
 }
+
