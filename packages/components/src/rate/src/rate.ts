@@ -25,7 +25,7 @@ export const rateProps = {
   },
   allowClear: {
     type: Boolean,
-    default: true,
+    default: false,
   },
 };
 
