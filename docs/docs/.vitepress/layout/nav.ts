@@ -10,3 +10,16 @@ export const nav = [
     link: '/components/button'
   }
 ]
+
+export const enNav = [
+  {
+    text: 'Guide',
+    activeMatch: '^/en/instructions/',
+    link: '/en/instructions/install'
+  },
+  {
+    text: 'Components',
+    activeMatch: '^/components/',
+    link: '/components/button'
+  }
+]

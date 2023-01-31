@@ -1,17 +1,17 @@
 ---
 layout: home
 
-title: DG-Design-Vue
+title: DG-Design-Vue 
 titleTemplate: 适用于Vue3的组件库
 
 hero:
-  name: DG-Design-Vue
+  name: DG-Design-Vue 中文
   text: 适用于Vue3的组件库
   tagline: 时尚、新颖、满足你猎奇的视觉需要
   actions:
     - theme: brand
       text: 快速开始
-      link: /instructions/install
+      link: /zh/instructions/install
     - theme: alt
       text: 在Github上查看
       link: https://github.com/dyggod/dg-design-vue.git
